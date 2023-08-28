@@ -1,0 +1,469 @@
+@charset "UTF-8";
+/*main color*/
+/*main color 50%*/
+/*secondary color*/
+/*hover on bright*/
+/*hover on dark*/
+/*active on bright*/
+/*active on dark*/
+/* Break points */
+/**
+ * @license
+ *
+ * Font Family: General Sans
+ * Designed by: Frode Helland
+ * URL: https://www.fontshare.com/fonts/general-sans
+ * © 2022 Indian Type Foundry
+ *
+ * Font Styles:
+ * General Sans Variable(Variable font)
+ * General Sans Variable Italic(Variable font)
+ * General Sans Extralight
+ * General Sans Extralight Italic
+ * General Sans Light
+ * General Sans Light Italic
+ * General Sans Regular
+ * General Sans Italic
+ * General Sans Medium
+ * General Sans Medium Italic
+ * General Sans Semibold
+ * General Sans Semibold Italic
+ * General Sans Bold
+ * General Sans Bold Italic
+ *
+*/
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 200.0 to 700.0) by range of 100
+
+*/
+@font-face {
+  font-family: "GeneralSans-Variable";
+  src: url("/fonts/General-Sans/WEB/fonts/GeneralSans-Variable.woff2") format("woff2"), url("/fonts/General-Sans/WEB/fonts/GeneralSans-Variable.woff") format("woff"), url("/fonts/General-Sans/WEB/fonts/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+   * This is a variable font
+   * You can controll variable axes as shown below:
+   * font-variation-settings: 'wght' 700.0;
+   *
+   * available axes:
+
+   * 'wght' (range from 200.0 to 700.0) by range of 100
+
+   */
+@font-face {
+  font-family: "GeneralSans-VariableItalic";
+  src: url("/fonts/General-Sans/WEB/fonts/GeneralSans-VariableItalic.woff2") format("woff2"), url("/fonts/General-Sans/WEB/fonts/GeneralSans-VariableItalic.woff") format("woff"), url("/fonts/General-Sans/WEB/fonts/GeneralSans-VariableItalic") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: italic;
+}
+/*animations globales -s*/
+.bouncing-top {
+  animation: bouncing-top 0.8s ease-in-out;
+}
+
+@keyframes bouncing-top {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.bouncing-left {
+  animation: bouncing-left 0.3s ease-in-out;
+}
+
+@keyframes bouncing-left {
+  0% {
+    transform: translatex(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
+.dring {
+  animation: dring 0.2s linear 2;
+}
+
+@keyframes dring {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -5deg;
+  }
+  75% {
+    rotate: 5deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+/*animations globales -e*/
+/*animations individuelles -s*/
+.fullscreen-animation {
+  animation: fullscreen-animation 1s ease-in-out;
+}
+
+@keyframes fullscreen-animation {
+  0% {
+    transform: translateY(-5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0vh);
+    opacity: 0.1;
+  }
+}
+/*animations individuelles -e*/
+/*| reset -start |*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "GeneralSans-Variable", sans-serif;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+/*| reset -end |*/
+/*----------| Global |----------*/
+:root {
+  font-size: 16px;
+  font-family: "GeneralSans-Variable";
+}
+
+body {
+  display: grid;
+  overflow-y: scroll;
+  color: #f0f0f0;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(49, 71, 102);
+  transition: background-color 0.3s ease-in-out;
+}
+
+abbr {
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  width: fit-content;
+  height: fit-content;
+}
+
+button a {
+  display: block;
+  padding: 0.7rem;
+  border-bottom: 1px solid rgb(49, 71, 102);
+}
+
+button a:hover {
+  background-color: #c7ced8;
+}
+
+button a:active {
+  background-color: #b2bccc;
+}
+
+h1 {
+  font-size: 4rem;
+  transition: transform 0.3s ease-in-out;
+  padding-bottom: 1.5rem;
+  color: rgb(49, 71, 102);
+  line-height: 4.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  color: rgb(49, 71, 102);
+}
+
+p + h2 {
+  padding-top: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  color: rgb(49, 71, 102);
+}
+
+p + h3 {
+  padding-top: 0.5rem;
+}
+
+p {
+  color: rgb(49, 71, 102);
+}
+
+article p {
+  padding-bottom: 0.5rem;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.rubriquage {
+  font-weight: 500;
+}
+
+.scale {
+  font-size: 2rem;
+}
+
+/*softwares -s*/
+.Softwares {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 12px;
+}
+
+.Ae {
+  font-weight: 500;
+  color: #9d98ff;
+  background: #00005a;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.Ps {
+  font-weight: 500;
+  color: #37a3f1;
+  background: #001e36;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.In {
+  font-weight: 500;
+  color: #fa3567;
+  background: #490220;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.Ai {
+  font-weight: 500;
+  color: #ee910e;
+  background: #320000;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.F {
+  font-weight: 500;
+  background: -webkit-linear-gradient(left, #f34e1e, #ff7261, #a259ff, #1abcfd, #0ace82);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.F-bg {
+  background: white;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+/*softwares -e*/
+#nav-left-btn {
+  border: none;
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 90;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #f0f0f0;
+}
+#nav-left-btn #sgmt-btn-nav-left {
+  border-top: 0.15rem solid rgb(49, 71, 102);
+  position: absolute;
+  width: 18px;
+  margin-left: 6px;
+  transition: transform 0.3s ease-in-out, border-top 0.3s ease-in-out;
+}
+
+.nav-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: rgb(49, 71, 102);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 22px;
+  overflow-y: scroll;
+  transition: transform 0.3s ease-in-out;
+}
+
+#container-logo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 11px;
+  width: 218px;
+  padding: 6px 6px 6px 11px;
+  transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transform: translateX(11px);
+  border-radius: 0.5rem;
+  fill: rgb(49, 71, 102);
+}
+#container-logo:hover {
+  background-color: #677b99;
+  fill: #677b99;
+}
+
+#picto-logo {
+  width: 70px;
+  fill: inherit;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+#text-logo {
+  line-height: 1.7rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #f0f0f0;
+}
+
+/*# sourceMappingURL=style.css.map */

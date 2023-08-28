@@ -1,0 +1,83 @@
+#nav-left-btn {
+  border: none;
+
+  position: fixed;
+  top: 22px;
+  right: 22px;
+
+  z-index: 90;
+
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: $colorTwo;
+
+  #sgmt-btn-nav-left {
+    border-top: 0.15rem solid $colorOne;
+    position: absolute;
+
+    width: 18px;
+    margin-left: 6px;
+
+    
+
+    transition: transform 0.3s ease-in-out, border-top 0.3s ease-in-out;
+  }
+}
+
+.nav-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: $colorOne;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 22px;
+  overflow-y: scroll;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+#container-logo {
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+  gap: 11px;
+
+  width: 218px;
+  padding: 6px 6px 6px 11px;
+
+  transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transform: translateX(11px);
+
+  border-radius: 0.5rem;
+  fill: $colorOne;
+
+  &:hover {
+    background-color: $colorFour;
+    fill: $colorFour;
+  }
+}
+
+#picto-logo {
+  width: 70px;
+  fill: inherit;
+  background-color: $colorTwo;
+  border-radius: 50%;
+}
+
+#text-logo {
+  line-height: 1.7rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  color: $colorTwo;
+}
