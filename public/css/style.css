@@ -1,11 +1,11 @@
 @charset "UTF-8";
-/*main color*/
-/*main color 50%*/
-/*secondary color*/
-/*hover on bright*/
-/*hover on dark*/
-/*active on bright*/
-/*active on dark*/
+/* main color */
+/* main color 50% */
+/* secondary color */
+/* hover on bright */
+/* hover on dark */
+/* active on bright */
+/* active on dark */
 /* Break points */
 /**
  * @license
@@ -260,7 +260,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(49, 71, 102);
+  color: #314766;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -279,7 +279,7 @@ button {
 button a {
   display: block;
   padding: 0.7rem;
-  border-bottom: 1px solid rgb(49, 71, 102);
+  border-bottom: 1px solid #314766;
 }
 
 button a:hover {
@@ -294,7 +294,7 @@ h1 {
   font-size: 4rem;
   transition: transform 0.3s ease-in-out;
   padding-bottom: 1.5rem;
-  color: rgb(49, 71, 102);
+  color: #314766;
   line-height: 4.8rem;
 }
 
@@ -302,7 +302,7 @@ h2 {
   font-size: 2rem;
   font-weight: 400;
   padding-bottom: 1rem;
-  color: rgb(49, 71, 102);
+  color: #314766;
 }
 
 p + h2 {
@@ -313,7 +313,7 @@ h3 {
   font-size: 1.25rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
-  color: rgb(49, 71, 102);
+  color: #314766;
 }
 
 p + h3 {
@@ -321,7 +321,7 @@ p + h3 {
 }
 
 p {
-  color: rgb(49, 71, 102);
+  color: #314766;
 }
 
 article p {
@@ -340,7 +340,7 @@ article p {
   font-size: 2rem;
 }
 
-/*softwares -s*/
+/* softwares -s */
 .Softwares {
   display: flex;
   flex-flow: row wrap;
@@ -398,7 +398,9 @@ article p {
   padding: 1px 10px;
 }
 
-/*softwares -e*/
+/* softwares -e */
+/*----------| bouton nav-left |----------*/
+/* button -s */
 #nav-left-btn {
   border: none;
   position: fixed;
@@ -412,26 +414,71 @@ article p {
   transition: background-color 0.3s ease-in-out;
   background-color: #f0f0f0;
 }
+#nav-left-btn:hover {
+  background-color: #677b99;
+}
+#nav-left-btn:hover #sgmt-btn-nav-left {
+  border-top: 0.15rem solid #f0f0f0;
+}
 #nav-left-btn #sgmt-btn-nav-left {
-  border-top: 0.15rem solid rgb(49, 71, 102);
+  border-top: 0.15rem solid #314766;
   position: absolute;
   width: 18px;
   margin-left: 6px;
   transition: transform 0.3s ease-in-out, border-top 0.3s ease-in-out;
 }
 
+/* button -e */
 .nav-left {
   position: fixed;
   top: 0;
   left: 0;
   width: 240px;
   height: 100vh;
-  background-color: rgb(49, 71, 102);
+  background-color: #314766;
   display: flex;
   flex-flow: column nowrap;
   gap: 22px;
   overflow-y: scroll;
   transition: transform 0.3s ease-in-out;
+}
+.nav-left ul {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2px;
+}
+.nav-left ul:last-child {
+  margin-bottom: auto;
+}
+.nav-left li {
+  border-radius: 0.5rem;
+  color: #f0f0f0;
+  fill: #f0f0f0;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 11px;
+  margin-right: 11px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.nav-left li:hover {
+  background-color: #677b99;
+}
+.nav-left li:active {
+  background-color: #8b9aae;
+}
+.nav-left li a {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.18rem;
+  color: inherit;
+  line-height: 20px;
+  padding: 11px 0;
+  padding-left: 11px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, font-weight 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
+.nav-left li:hover a {
+  transform: translateX(6px);
+  font-weight: 500;
 }
 
 #container-logo {
@@ -441,10 +488,11 @@ article p {
   gap: 11px;
   width: 218px;
   padding: 6px 6px 6px 11px;
+  margin-top: auto;
   transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transform: translateX(11px);
   border-radius: 0.5rem;
-  fill: rgb(49, 71, 102);
+  fill: #314766;
 }
 #container-logo:hover {
   background-color: #677b99;
@@ -465,5 +513,27 @@ article p {
   cursor: pointer;
   color: #f0f0f0;
 }
+
+/* picto -s */
+.left-nav-picto {
+  max-width: 1.5rem;
+  fill: inherit;
+  align-self: center;
+  margin-right: 0.42rem;
+}
+
+/* picto -e */
+/*
+#container-nav-left li a#page-active {
+  color: $colorFour);
+  fill: $colorFour);
+  font-weight: 600;
+}
+
+#container-nav-left li a#page-active:hover {
+  fill: $colorOne);
+  color: $colorOne);
+}
+*/
 
 /*# sourceMappingURL=style.css.map */

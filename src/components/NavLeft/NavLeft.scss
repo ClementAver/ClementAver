@@ -1,3 +1,6 @@
+/*----------| bouton nav-left |----------*/
+
+/* button -s */
 #nav-left-btn {
   border: none;
 
@@ -14,6 +17,14 @@
   transition: background-color 0.3s ease-in-out;
   background-color: $colorTwo;
 
+  &:hover {
+    background-color: $colorFour;
+
+    #sgmt-btn-nav-left {
+      border-top: 0.15rem solid $colorTwo;
+    }
+  }
+
   #sgmt-btn-nav-left {
     border-top: 0.15rem solid $colorOne;
     position: absolute;
@@ -21,11 +32,10 @@
     width: 18px;
     margin-left: 6px;
 
-    
-
     transition: transform 0.3s ease-in-out, border-top 0.3s ease-in-out;
   }
 }
+/* button -e */
 
 .nav-left {
   position: fixed;
@@ -41,6 +51,55 @@
   overflow-y: scroll;
 
   transition: transform 0.3s ease-in-out;
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+
+    &:last-child {
+      margin-bottom: auto;
+    }
+  }
+
+  li {
+    border-radius: 0.5rem;
+    color: $colorTwo;
+    fill: $colorTwo;
+
+    cursor: pointer;
+    user-select: none;
+
+    margin-left: 11px;
+    margin-right: 11px;
+
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $colorFour;
+    }
+
+    &:active {
+      background-color: $colorSix;
+    }
+
+    a {
+      display: flex;
+      flex-flow: row nowrap;
+
+      gap: 0.18rem;
+      color: inherit;
+      line-height: 20px;
+      padding: 11px 0;
+      padding-left: 11px;
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, font-weight 0.3s ease-in-out, fill 0.3s ease-in-out;
+    }
+
+    &:hover a {
+      transform: translateX(6px);
+      font-weight: 500;
+    }
+  }
 }
 
 #container-logo {
@@ -52,6 +111,7 @@
 
   width: 218px;
   padding: 6px 6px 6px 11px;
+  margin-top: auto;
 
   transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transform: translateX(11px);
@@ -81,3 +141,25 @@
   cursor: pointer;
   color: $colorTwo;
 }
+
+/* picto -s */
+.left-nav-picto {
+  max-width: 1.5rem;
+  fill: inherit;
+  align-self: center;
+  margin-right: 0.42rem;
+}
+/* picto -e */
+
+/*
+#container-nav-left li a#page-active {
+  color: $colorFour);
+  fill: $colorFour);
+  font-weight: 600;
+}
+
+#container-nav-left li a#page-active:hover {
+  fill: $colorOne);
+  color: $colorOne);
+}
+*/

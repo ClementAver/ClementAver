@@ -1,16 +1,16 @@
-/*main color*/
-$colorOne: rgba(49, 71, 102, 1);
-/*main color 50%*/
+/* main color */
+$colorOne: #314766;
+/* main color 50% */
 $colorOneOpaciteCinquante: rgba(49, 71, 102, 0.5);
-/*secondary color*/
+/* secondary color */
 $colorTwo: #f0f0f0;
-/*hover on bright*/
+/* hover on bright */
 $colorThree: #c7ced8;
-/*hover on dark*/
+/* hover on dark */
 $colorFour: #677b99;
-/*active on bright*/
+/* active on bright */
 $colorFive: #b2bccc;
-/*active on dark*/
+/* active on dark */
 $colorSix: #8b9aae;
 
 /* Break points */
@@ -235,7 +235,7 @@ article p {
   font-size: 2rem;
 }
 
-/*softwares -s*/
+/* softwares -s */
 .Softwares {
   display: flex;
   flex-flow: row wrap;
@@ -297,6 +297,6 @@ article p {
   border-radius: 20px;
   padding: 1px 10px;
 }
-/*softwares -e*/
+/* softwares -e */
 
 @import "./components/NavLeft/NavLeft.scss";
