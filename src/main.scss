@@ -22,6 +22,7 @@ $xxl: "1536px";
 
 @import "./fonts.scss";
 @import "./animations.scss";
+@import "./pages/About/About.scss";
 
 /*| reset -start |*/
 
@@ -133,14 +134,6 @@ video {
   font-family: "GeneralSans-Variable";
 }
 
-body {
-  display: grid;
-
-  overflow-y: scroll;
-
-  color: $colorTwo;
-}
-
 #root {
   margin: 0;
   padding: 0;
@@ -149,6 +142,22 @@ body {
 .App {
   min-width: 100vw;
   min-height: 100vh;
+
+  display: grid;
+
+  overflow-y: scroll;
+
+  color: $colorTwo;
+}
+
+main {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.nav-left.deployed + main {
+  @media (min-width: $md) {
+    margin-left: 240px;
+  }
 }
 
 a {

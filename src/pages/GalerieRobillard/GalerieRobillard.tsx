@@ -24,5 +24,9 @@ export default function GalerieRobillard() {
     console.log(project);
   }, []);
 
-  return <h1>{project?.title}</h1>;
+  return (
+    <main>
+      <h1>{project?.title}</h1>
+    </main>
+  );
 }

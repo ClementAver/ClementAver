@@ -135,6 +135,115 @@
   }
 }
 /*animations individuelles -e*/
+/*----------| main |----------*/
+/*main-containers -s*/
+.about {
+  background-color: var(--colorTwo);
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: margin-left 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+.container-slide-intro {
+  scroll-snap-align: start;
+  width: 100%;
+  min-width: 344px;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 22px;
+  gap: 22px;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+@media (max-width: 1280px) {
+  .container-slide-intro {
+    scroll-snap-align: none;
+  }
+}
+@media (max-height: 950px) {
+  .container-slide-intro {
+    scroll-snap-align: none;
+  }
+}
+
+.container-slide-CV {
+  scroll-snap-align: start;
+  width: 100%;
+  min-width: 344px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 22px;
+  overflow-x: hidden;
+}
+@media (max-width: 1280px) {
+  .container-slide-CV {
+    scroll-snap-align: none;
+  }
+}
+@media (max-height: 950px) {
+  .container-slide-CV {
+    scroll-snap-align: none;
+  }
+}
+
+/*main-containers -e*/
+/* intro -s*/
+.portrait {
+  width: 100%;
+  min-width: 150px;
+  max-width: 25vh;
+  border-radius: 426px;
+}
+
+.container-flex-intro {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  min-width: 300px;
+  max-width: 874px;
+  height: fit-content;
+  text-align: center;
+}
+
+/* intro -e*/
+/* CV -s*/
+.container-CV {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 22px;
+  row-gap: 10vh;
+  width: 100%;
+  max-width: 1322px;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .item-CV {
+    grid-column: 1/-1;
+    min-width: 300px;
+    max-width: 426px;
+    justify-self: center;
+  }
+}
+
+#logo-stamp {
+  width: 70px;
+  padding-top: 10vh;
+  fill: var(--colorOne);
+  margin-bottom: 5vh;
+}
+
+/* CV -e*/
 /*| reset -start |*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -242,12 +351,6 @@ video {
   font-family: "GeneralSans-Variable";
 }
 
-body {
-  display: grid;
-  overflow-y: scroll;
-  color: #f0f0f0;
-}
-
 #root {
   margin: 0;
   padding: 0;
@@ -256,6 +359,19 @@ body {
 .App {
   min-width: 100vw;
   min-height: 100vh;
+  display: grid;
+  overflow-y: scroll;
+  color: #f0f0f0;
+}
+
+main {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .nav-left.deployed + main {
+    margin-left: 240px;
+  }
 }
 
 a {
@@ -441,6 +557,11 @@ article p {
   gap: 22px;
   overflow-y: scroll;
   transition: transform 0.3s ease-in-out;
+  transform: translate(-240px);
+}
+.nav-left.deployed {
+  transform: translate(0px);
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
 }
 .nav-left ul {
   display: flex;

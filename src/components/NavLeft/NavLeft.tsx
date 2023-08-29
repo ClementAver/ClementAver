@@ -9,9 +9,12 @@ export default function NavLeft() {
   const [display, setDisplay] = useState(false);
 
   const button = useRef<HTMLButtonElement>(null);
+  const navLeft = useRef<HTMLElement>(null);
 
   const handleClick = () => {
     setDisplay(!display);
+    console.log(navLeft.current);
+    navLeft.current?.classList.toggle("deployed");
   };
 
   useEffect(() => {
@@ -55,8 +58,8 @@ export default function NavLeft() {
         ></div>
       </button>
       <nav
+        ref={navLeft}
         className="nav-left"
-        style={display ? { transform: "translateX(0px)", boxShadow: "2px 0 4px rgba(0, 0, 0, 0.25)" } : { transform: "translateX(-240px)" }}
       >
         <LogoCard />
         <ul>
