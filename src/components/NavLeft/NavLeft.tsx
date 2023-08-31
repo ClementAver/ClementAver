@@ -1,37 +1,19 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import LogoCard from "../LogoCard/LogoCard";
 import { projects } from "../../data/data";
 import MenuItem from "../MenuItem/MenuItem";
-// import type { Project } from "./NavLeft";
+import type { Project } from "../../Types";
 
 export default function NavLeft() {
   const [display, setDisplay] = useState(false);
 
-  const button = useRef<HTMLButtonElement>(null);
   const navLeft = useRef<HTMLElement>(null);
 
   const handleClick = () => {
     setDisplay(!display);
-    console.log(navLeft.current);
     navLeft.current?.classList.toggle("deployed");
   };
-
-  useEffect(() => {
-    console.log(button.current?.children);
-  }, []);
-
-  interface Project {
-    id: string;
-    logo: string;
-    title: string;
-    tags: string[];
-    date: string;
-    work: string;
-    summary: string;
-    covers: { src: string; alt: string }[];
-    medias: ({ src: string; type: string; alt?: undefined } | { src: string; alt: string; type?: undefined })[];
-  }
 
   return (
     <>
@@ -67,7 +49,7 @@ export default function NavLeft() {
             <MenuItem
               key={project.id}
               id={project.id}
-              title={project.title}
+              menu={project.menu}
             />
           ))}
         </ul>

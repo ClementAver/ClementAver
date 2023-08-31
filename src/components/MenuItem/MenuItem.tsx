@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
+import type { MenuItem } from "../../Types";
 
-type Props = {
-  id: string;
-  title: string;
-};
 
-export default function MenuItem({ id, title }: Props) {
+export default function MenuItem({ id, menu }: MenuItem) {
   return (
     <li>
-      <Link to={id}>{title}</Link>
+      <Link to={id}>{menu}</Link>
     </li>
   );
 }

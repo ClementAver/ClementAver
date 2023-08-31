@@ -1,0 +1,63 @@
+/*----------| main |----------*/
+
+/*main-containers -s*/
+.projects {
+  .main-content {
+    grid-area: content;
+  }
+
+  .container-slide {
+    scroll-snap-align: start;
+
+    min-height: 100vh;
+    min-width: 344px;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+
+    @media screen and (max-height: 950px) {
+      scroll-snap-align: none;
+      min-height: fit-content;
+    }
+  }
+
+  .container-full-height {
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 100%;
+    min-width: 300px;
+    max-width: 874px;
+
+    height: 100%;
+    min-height: 100vh;
+    padding: 22px;
+
+    text-align: center;
+    justify-content: center;
+  }
+  /*main-containers -e*/
+
+  /* intro -s*/
+  .container-flex-intro h1 {
+    width: fit-content;
+    align-self: center;
+
+    &:hover {
+      transform: scale(1.2);
+      cursor: default;
+    }
+  }
+
+  .logo-projet {
+    height: 20vh;
+    min-height: 150px;
+    max-height: 300px;
+    margin-bottom: 2vh;
+  }
+  /* intro -e*/
+}

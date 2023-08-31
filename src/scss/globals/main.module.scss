@@ -1,0 +1,24 @@
+/* main color */
+$colorOne: #314766;
+/* main color 50% */
+$colorOneOpaciteCinquante: rgba(49, 71, 102, 0.5);
+/* secondary color */
+$colorTwo: #f0f0f0;
+/* hover on bright */
+$colorThree: #c7ced8;
+/* hover on dark */
+$colorFour: #677b99;
+/* active on bright */
+$colorFive: #b2bccc;
+/* active on dark */
+$colorSix: #8b9aae;
+
+:export {
+  colorOne: $colorOne;
+  colorOneOpaciteCinquante: $colorOneOpaciteCinquante;
+  colorTwo: $colorTwo;
+  colorThree: $colorThree;
+  colorFour: $colorFour;
+  colorFive: $colorFive;
+  colorSix: $colorSix;
+}

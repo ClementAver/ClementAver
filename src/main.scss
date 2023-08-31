@@ -20,9 +20,8 @@ $lg: "1024px";
 $xl: "1280px";
 $xxl: "1536px";
 
-@import "./fonts.scss";
-@import "./animations.scss";
-@import "./pages/About/About.scss";
+@import "./scss/globals/fonts.scss";
+@import "./scss/globals/animations.scss";
 
 /*| reset -start |*/
 
@@ -151,12 +150,27 @@ video {
 }
 
 main {
-  transition: margin-left 0.3s ease-in-out;
-}
+  background: var(--colorTwo);
 
-.nav-left.deployed + main {
-  @media (min-width: $md) {
-    margin-left: 240px;
+  height: 100vh;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  transition: margin-left 0.3s ease-in-out;
+
+  &.project {
+    display: grid;
+
+    grid-template-columns: 1fr 0px;
+    grid-template-areas: "content summary";
+
+    @media screen and (min-width: 1846px) {
+      grid-template-columns: 1fr 240px;
+    }
   }
 }
 
@@ -308,4 +322,7 @@ article p {
 }
 /* softwares -e */
 
-@import "./components/NavLeft/NavLeft.scss";
+@import "./scss/pages/Home.scss";
+@import "./scss/pages/About.scss";
+@import "./scss/pages/projects.scss";
+@import "./scss/components/NavLeft.scss";

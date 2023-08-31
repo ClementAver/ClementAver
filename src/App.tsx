@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import NavLeft from "./components/NavLeft/NavLeft";
-import GalerieRobillard from "./pages/GalerieRobillard/GalerieRobillard";
-import LaNuitDuDroit from "./pages/LaNuitDuDroit/LaNuitDuDroit";
+import GalerieRobillard from "./pages/projects/GalerieRobillard/GalerieRobillard";
+import LaNuitDuDroit from "./pages/projects/LaNuitDuDroit/LaNuitDuDroit";
 import About from "./pages/About/About";
 
 export default function App() {
