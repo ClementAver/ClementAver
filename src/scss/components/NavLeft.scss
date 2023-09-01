@@ -55,6 +55,7 @@
   flex-flow: column nowrap;
   gap: 22px;
   overflow-y: scroll;
+  overflow-x: hidden;
 
   transition: transform 0.3s ease-in-out;
   transform: translate(-240px);
@@ -111,6 +112,17 @@
       transform: translateX(6px);
       font-weight: 500;
     }
+
+    a#page-active {
+      color: $colorFour;
+      fill: $colorFour;
+      font-weight: 600;
+    }
+
+    a#page-active:hover {
+      fill: $colorOne;
+      color: $colorOne;
+    }
   }
 }
 
@@ -163,15 +175,10 @@
 }
 /* picto -e */
 
-/*
-#container-nav-left li a#page-active {
-  color: $colorFour);
-  fill: $colorFour);
-  font-weight: 600;
-}
+/*----------| scrollbar |----------*/
 
-#container-nav-left li a#page-active:hover {
-  fill: $colorOne);
-  color: $colorOne);
+/*scrollbar -s*/
+.nav-left::-webkit-scrollbar {
+  display: none;
 }
-*/
+/*scrollbar -e*/

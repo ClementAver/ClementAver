@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Break points */
 /* main color */
 /* main color 50% */
 /* secondary color */
@@ -6,7 +7,16 @@
 /* hover on dark */
 /* active on bright */
 /* active on dark */
-/* Break points */
+:export {
+  colorOne: #314766;
+  colorOneOpaciteCinquante: rgba(49, 71, 102, 0.5);
+  colorTwo: #f0f0f0;
+  colorThree: #c7ced8;
+  colorFour: #677b99;
+  colorFive: #b2bccc;
+  colorSix: #8b9aae;
+}
+
 /**
  * @license
  *
@@ -254,9 +264,12 @@ video {
   overflow-y: scroll;
   color: #f0f0f0;
 }
+.App::-webkit-scrollbar {
+  display: none;
+}
 
 main {
-  background: var(--colorTwo);
+  background: #f0f0f0;
   height: 100vh;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -528,7 +541,7 @@ article p {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 22px;
   overflow-x: hidden;
 }
@@ -763,6 +776,7 @@ article p {
   flex-flow: column nowrap;
   gap: 22px;
   overflow-y: scroll;
+  overflow-x: hidden;
   transition: transform 0.3s ease-in-out;
   transform: translate(-240px);
 }
@@ -808,6 +822,15 @@ article p {
   transform: translateX(6px);
   font-weight: 500;
 }
+.nav-left li a#page-active {
+  color: #677b99;
+  fill: #677b99;
+  font-weight: 600;
+}
+.nav-left li a#page-active:hover {
+  fill: #314766;
+  color: #314766;
+}
 
 #container-logo {
   display: flex;
@@ -851,17 +874,56 @@ article p {
 }
 
 /* picto -e */
-/*
-#container-nav-left li a#page-active {
-  color: $colorFour);
-  fill: $colorFour);
-  font-weight: 600;
+/*----------| scrollbar |----------*/
+/*scrollbar -s*/
+.nav-left::-webkit-scrollbar {
+  display: none;
 }
 
-#container-nav-left li a#page-active:hover {
-  fill: $colorOne);
-  color: $colorOne);
+/*scrollbar -e*/
+/*----------| scrollbar |----------*/
+/*scrollbar -s*/
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
 }
-*/
+
+::-webkit-scrollbar-thumb {
+  background: #c7ced8;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#container-nav-left::-webkit-scrollbar {
+  display: none;
+}
+
+#container-nav-right::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: #314766;
+}
+
+#left-nav-bg::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar {
+  width: 6px;
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  main::-webkit-scrollbar {
+    display: none;
+  }
+}
+/*scrollbar -e*/
 
 /*# sourceMappingURL=style.css.map */

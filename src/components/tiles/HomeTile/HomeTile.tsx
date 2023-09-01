@@ -11,21 +11,52 @@ export default function HomeTile({ project }: { key: string; project: Project })
   const link = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
-    const { colorOne, colorTwo } = main;
+    const { colorOne, colorTwo, colorFour, colorSix } = main;
+
+    function onMouseOver() {
+      if (link.current) link.current.style.backgroundColor = colorFour;
+    }
+    function onMouseDown() {
+      if (link.current) link.current.style.backgroundColor = colorSix;
+    }
+    function onMouseOut() {
+      if (link.current) link.current.style.backgroundColor = "";
+    }
 
     const resizeObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
         if (link.current && entry.target.clientHeight < 483) {
           entry.target.setAttribute("style", `background-color: ${colorOne}; color: ${colorTwo}`);
+
           link.current.style.borderBottom = `1px solid ${colorTwo}`;
+
+          link.current.addEventListener("mouseover", onMouseOver);
+          link.current.addEventListener("mousedown", onMouseDown);
+          link.current.addEventListener("mouseout", onMouseOut);
         } else if (link.current && entry.target.clientHeight >= 483) {
           entry.target.setAttribute("style", `color: ${colorOne}`);
-          link.current.style.borderBottom = `1px solid ${colorOne}`;
+
+          link.current.style.borderBottom = "";
+
+          link.current.removeEventListener("mouseover", onMouseOver);
+          link.current.removeEventListener("mousedown", onMouseDown);
+          link.current.removeEventListener("mouseout", onMouseOut);
         }
       });
     });
-    resizeObserver.observe(description.current as HTMLDivElement);
-  }, [link]);
+
+    if (description.current) {
+      resizeObserver.observe(description.current);
+    }
+
+    return () => {
+      /* 
+        Clean up the ResizeObserver when the component unmounts.
+        Helps keeping only one observer at a time for each eventType on the button, when it is needed. 
+      */
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   return (
     <section
@@ -74,16 +105,17 @@ export default function HomeTile({ project }: { key: string; project: Project })
               );
             })}
           </p>
-
           <p>{work}</p>
-
           <p>{summary}</p>
           <br />
-
-          <button type="button">
+          <button
+            type="button"
+            draggable="false"
+          >
             <Link
               ref={link}
               to={`/${id}`}
+              draggable="false"
             >
               Voir ce projet
             </Link>

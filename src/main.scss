@@ -1,18 +1,3 @@
-/* main color */
-$colorOne: #314766;
-/* main color 50% */
-$colorOneOpaciteCinquante: rgba(49, 71, 102, 0.5);
-/* secondary color */
-$colorTwo: #f0f0f0;
-/* hover on bright */
-$colorThree: #c7ced8;
-/* hover on dark */
-$colorFour: #677b99;
-/* active on bright */
-$colorFive: #b2bccc;
-/* active on dark */
-$colorSix: #8b9aae;
-
 /* Break points */
 $sm: "640px";
 $md: "768px";
@@ -20,6 +5,7 @@ $lg: "1024px";
 $xl: "1280px";
 $xxl: "1536px";
 
+@import "./scss/globals/main.module.scss";
 @import "./scss/globals/fonts.scss";
 @import "./scss/globals/animations.scss";
 
@@ -147,10 +133,14 @@ video {
   overflow-y: scroll;
 
   color: $colorTwo;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 main {
-  background: var(--colorTwo);
+  background: $colorTwo;
 
   height: 100vh;
 
@@ -326,3 +316,49 @@ article p {
 @import "./scss/pages/About.scss";
 @import "./scss/pages/projects.scss";
 @import "./scss/components/NavLeft.scss";
+
+/*----------| scrollbar |----------*/
+
+/*scrollbar -s*/
+::-webkit-scrollbar-track {
+  background-color: $colorTwo;
+}
+::-webkit-scrollbar-thumb {
+  background: $colorThree;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#container-nav-left::-webkit-scrollbar {
+  display: none;
+}
+
+#container-nav-right::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: $colorOne;
+}
+
+#left-nav-bg::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar {
+  width: 6px;
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  main::-webkit-scrollbar {
+    display: none;
+  }
+}
+/*scrollbar -e*/

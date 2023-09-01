@@ -1,11 +1,16 @@
 import { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import LogoCard from "../LogoCard/LogoCard";
 import { projects } from "../../data/data";
 import MenuItem from "../MenuItem/MenuItem";
 import type { Project } from "../../Types";
+import Icon from "../../assets/vectors.js";
 
 export default function NavLeft() {
+  const location = useLocation();
+
+  console.log(location.pathname);
+  const IconBox = new Icon();
   const [display, setDisplay] = useState(false);
 
   const navLeft = useRef<HTMLElement>(null);
@@ -47,39 +52,28 @@ export default function NavLeft() {
         <ul>
           {projects.map((project: Project) => (
             <MenuItem
-              key={project.id}
+              key={`MenuItem-${project.id}`}
               id={project.id}
               menu={project.menu}
+              path={location.pathname}
             />
           ))}
         </ul>
         <ul>
-          <li>
-            <Link to="/about">
-              <svg
-                className="left-nav-picto"
-                viewBox="0 0 26.5 22.41"
-              >
-                <g>
-                  <path d="M13.25,14.83a9.83,9.83,0,0,1,9.56,7.58,13.25,13.25,0,1,0-19.12,0A9.83,9.83,0,0,1,13.25,14.83ZM13.25,4A4.92,4.92,0,1,1,8.33,8.92,4.92,4.92,0,0,1,13.25,4Z" />
-                </g>
-              </svg>
-              &Agrave; propos
-            </Link>
-          </li>
-          <li>
-            <a href="mailto:clement.aver@yahoo.fr">
-              <svg
-                className="left-nav-picto"
-                viewBox="0 0 153.11 118.71"
-              >
-                <g>
-                  <path d="M0,66.22l42.49,9.65,7.79,42.84L77.63,87.85l25.48,13L153.11,0ZM55.11,78.67,52,104.94,47.11,74.22,153.11,0Z" />
-                </g>
-              </svg>
-              Me contacter
-            </a>
-          </li>
+          <MenuItem
+            key={"MenuItem-about"}
+            id="about"
+            menu="&Agrave; propos"
+            path={location.pathname}
+            icon={IconBox.aPropos()}
+          />
+          <MenuItem
+            key={"MenuItem-contact"}
+            id="mailto:clement.aver@yahoo.fr"
+            menu="Me contacter"
+            path={location.pathname}
+            icon={IconBox.contact()}
+          />
         </ul>
       </nav>
     </>

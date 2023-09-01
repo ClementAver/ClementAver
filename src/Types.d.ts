@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export type Video = {
   src: string;
   type: string;
@@ -21,6 +23,8 @@ export type Media = { className?: string; src: string; type?: string; alt?: stri
 export type MenuItem = {
   id: string;
   menu: string;
+  path: string;
+  icon?: ReactElement;
 };
 
 export interface Project {
