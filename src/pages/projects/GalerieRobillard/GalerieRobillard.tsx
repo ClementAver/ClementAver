@@ -14,5 +14,9 @@ export default function GalerieRobillard() {
     console.log(project);
   }, []);
 
-  return <main className="projects">{project && <ProjectIntro project={project} />}</main>;
+  return (
+    <main className="projects">
+      {project && <ProjectIntro project={project} />}
+    </main>
+  );
 }

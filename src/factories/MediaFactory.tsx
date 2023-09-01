@@ -17,7 +17,7 @@ export default function MediaFactory({ className, src, type, muted, poster, alt,
         className={className}
       />
     );
-  } else if (alt) {
+  } else {
     return (
       <Image
         src={src}

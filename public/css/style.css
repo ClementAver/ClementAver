@@ -646,6 +646,76 @@ article p {
   margin-bottom: 2vh;
 }
 
+/* media -s*/
+.container-media {
+  display: grid;
+  padding: 22px 0;
+  column-gap: 22px;
+}
+@media screen and (min-width: 1846px) {
+  .container-media {
+    display: grid;
+    grid-template-areas: "left right";
+  }
+}
+@media screen and (min-width: 744px) {
+  .container-media {
+    padding: 22px 22px;
+  }
+}
+
+.media {
+  width: 100%;
+  min-width: 344px;
+  max-width: 1322px;
+  height: fit-content;
+  max-height: 70vh;
+  object-fit: contain;
+  /*background: linear-gradient(135deg, black, 50%, var(--colorOne));*/
+}
+
+.media-description {
+  grid-column: 1/2;
+  height: fit-content;
+  padding: 22px 35px 22px 22px;
+  display: flex;
+  flex-flow: row wrap;
+  width: min-content;
+  min-width: 100%;
+  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--colorOne);
+}
+
+@media screen and (min-width: 1846px) {
+  .container-media {
+    display: grid;
+    grid-template-areas: "left right";
+  }
+  .media-left {
+    grid-area: left;
+    max-height: 90vh;
+  }
+  .media-description-right {
+    grid-area: right;
+    height: 100%;
+    min-width: 344px;
+    align-content: center;
+  }
+}
+/*-*/
+.media-description h2 {
+  font-size: 1.2rem;
+  padding-bottom: 0;
+  color: inherit;
+}
+
+.media-description p {
+  color: inherit;
+}
+
+/* media -e*/
 /*----------| bouton nav-left |----------*/
 @media (min-width: 768px) {
   .nav-left.deployed + main {

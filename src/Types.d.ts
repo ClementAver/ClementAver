@@ -38,3 +38,10 @@ export interface Project {
   cover: Media;
   medias: Media[];
 }
+
+export interface Slider {
+  medias: Media[];
+  description: string;
+  softwares: [];
+  id: string;
+}
