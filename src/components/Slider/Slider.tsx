@@ -10,11 +10,11 @@ export default function Slider({ medias, description, softwares, id }: Slider) {
   const [count, setCount] = useState<number>(0);
 
   const handlePrevious = () => {
-    setCount(count - 1);
+    count > 0 ? setCount(count - 1) : setCount(medias.length);
   };
 
   const handleNext = () => {
-    setCount(count + 1);
+    count < medias.length ? setCount(count + 1) : setCount(0);
   };
 
   return (
