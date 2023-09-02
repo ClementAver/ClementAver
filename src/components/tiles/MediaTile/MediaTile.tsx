@@ -1,0 +1,32 @@
+import { Media } from "../../../Types";
+import MediaFactory from "../../../factories/MediaFactory";
+import Softwares from "../../Softwares/Softwares";
+
+export default function MediaTile({ id, media, description, softwares }: { id: string; media: Media; description: string; softwares: [] }) {
+  return (
+    <section
+      className="container-slide"
+      id={id}
+    >
+      <div className="container-media">
+        <MediaFactory
+          src={media.src}
+          type={media.type}
+          alt={media.alt}
+          muted={media.muted}
+          playsInline={media.playsInline}
+          autoPlay={media.autoPlay}
+          loop={media.loop}
+          poster={media.poster}
+          className={media.className}
+        />
+
+        <div className="media-description">
+          <h2>{description}</h2>
+
+          <Softwares softwares={softwares} />
+        </div>
+      </div>
+    </section>
+  );
+}
