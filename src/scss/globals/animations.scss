@@ -1,4 +1,3 @@
-/*animations globales -s*/
 .bouncing-top {
   animation: bouncing-top 0.8s ease-in-out;
 }
@@ -52,9 +51,7 @@
     rotate: 0deg;
   }
 }
-/*animations globales -e*/
 
-/*animations individuelles -s*/
 .fullscreen-animation {
   animation: fullscreen-animation 1s ease-in-out;
 }
@@ -69,4 +66,25 @@
     opacity: 0.1;
   }
 }
-/*animations individuelles -e*/
+
+@keyframes slidePrevious {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideNext {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

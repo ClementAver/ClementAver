@@ -7,7 +7,10 @@ export default function ProjectIntro({ project }: { project: Project }) {
   const logoAlt = `Logo de la ${logo.alt}`;
 
   return (
-    <section className="container-slide">
+    <section
+      id="intro"
+      className="container-slide"
+    >
       <article className="container-full-height">
         <img
           className="logo-projet"

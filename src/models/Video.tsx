@@ -1,19 +1,19 @@
 import type { Video } from "../Types";
 
-export default function Video({ src, type, muted, poster, alt, playsInline, autoPlay, loop }: Video) {
+export default function Video({ className, poster, src, type, muted, alt, playsInline, autoPlay, loop, controls }: Video) {
   // const url = () => `https://clementaver.github.io/ClementAver/assets/videos/${src}`;
   const url = () => `/assets/videos/${src}`;
   const urlPoster = () => `/assets/posters/${poster}`;
 
   return (
     <video
-      className="preview"
-      src={url()}
-      muted={muted}
+      className={className}
       poster={urlPoster()}
+      muted={muted}
       playsInline={playsInline}
       autoPlay={autoPlay}
       loop={loop}
+      controls={controls}
     >
       <source
         src={url()}

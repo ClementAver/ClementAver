@@ -4,11 +4,13 @@ import NavLeft from "./components/NavLeft/NavLeft";
 import GalerieRobillard from "./pages/projects/GalerieRobillard/GalerieRobillard";
 import LaNuitDuDroit from "./pages/projects/LaNuitDuDroit/LaNuitDuDroit";
 import About from "./pages/About/About";
+import ScrollToAnchor from "./utils/ScrollToAnchor/ScrollToAnchor";
 
 export default function App() {
   return (
     <div className="App">
       <NavLeft />
+      <ScrollToAnchor />
       <Routes>
         <Route
           path="/"

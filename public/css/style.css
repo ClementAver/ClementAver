@@ -76,7 +76,6 @@
   font-display: swap;
   font-style: italic;
 }
-/*animations globales -s*/
 .bouncing-top {
   animation: bouncing-top 0.8s ease-in-out;
 }
@@ -128,8 +127,6 @@
     rotate: 0deg;
   }
 }
-/*animations globales -e*/
-/*animations individuelles -s*/
 .fullscreen-animation {
   animation: fullscreen-animation 1s ease-in-out;
 }
@@ -144,7 +141,26 @@
     opacity: 0.1;
   }
 }
-/*animations individuelles -e*/
+@keyframes slidePrevious {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideNext {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 /*| reset -start |*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -371,7 +387,7 @@ article p {
 }
 
 /* softwares -s */
-.Softwares {
+.softwares {
   display: flex;
   flex-flow: row wrap;
   gap: 12px;
@@ -429,7 +445,12 @@ article p {
 }
 
 /* softwares -e */
-.container-slide {
+.home {
+  /*main-containers -e*/
+  /* template projet -s*/
+  /* template projet -e*/
+}
+.home .container-slide {
   scroll-snap-align: center;
   width: 100%;
   min-width: 344px;
@@ -440,14 +461,11 @@ article p {
   overflow-x: hidden;
 }
 @media screen and (max-height: 950px) {
-  .container-slide {
+  .home .container-slide {
     scroll-snap-align: none;
   }
 }
-
-/*main-containers -e*/
-/* template projet -s*/
-.container-projet {
+.home .container-projet {
   max-width: 100%;
   max-height: 100%;
   display: grid;
@@ -459,15 +477,13 @@ article p {
   margin-top: auto;
   margin-bottom: auto;
 }
-
-.preview {
+.home .preview {
   width: 100%;
   max-width: 1322px;
   height: 100%;
   object-fit: cover;
 }
-
-.description {
+.home .description {
   width: 100%;
   max-width: 650px;
   height: 100%;
@@ -478,25 +494,20 @@ article p {
   padding: 22px 35px 35px 22px;
   color: #314766;
 }
-
-.description h2 {
+.home .description h2 {
   color: inherit;
 }
-
-.description p {
+.home .description p {
   color: inherit;
 }
-
-.description button {
+.home .description button {
   color: inherit;
 }
-
-.description button a {
+.home .description button a {
   color: inherit;
   transition: border-bottom 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* template projet -e*/
 /*----------| main |----------*/
 /*main-containers -s*/
 .about {
@@ -639,7 +650,6 @@ article p {
   min-width: 300px;
   max-width: 874px;
   height: 100%;
-  min-height: 100vh;
   padding: 22px;
   text-align: center;
   justify-content: center;
@@ -662,7 +672,7 @@ article p {
 /* media -s*/
 .container-media {
   display: grid;
-  padding: 22px 0;
+  margin: 22px 0;
   column-gap: 22px;
 }
 @media screen and (min-width: 1846px) {
@@ -673,7 +683,7 @@ article p {
 }
 @media screen and (min-width: 744px) {
   .container-media {
-    padding: 22px 22px;
+    margin: 22px 22px;
   }
 }
 
@@ -684,7 +694,6 @@ article p {
   height: fit-content;
   max-height: 70vh;
   object-fit: contain;
-  /*background: linear-gradient(135deg, black, 50%, var(--colorOne));*/
 }
 
 .media-description {
@@ -698,18 +707,17 @@ article p {
   gap: 22px;
   align-items: center;
   justify-content: space-between;
-  background: var(--colorOne);
+  background: #314766;
 }
 
 @media screen and (min-width: 1846px) {
-  .container-media {
-    display: grid;
-    grid-template-areas: "left right";
-  }
   .media-left {
     grid-area: left;
     max-height: 90vh;
   }
+}
+
+@media screen and (min-width: 1846px) {
   .media-description-right {
     grid-area: right;
     height: 100%;
@@ -717,6 +725,7 @@ article p {
     align-content: center;
   }
 }
+
 /*-*/
 .media-description h2 {
   font-size: 1.2rem;
@@ -729,6 +738,14 @@ article p {
 }
 
 /* media -e*/
+/* outro -s*/
+.boutons-multiples {
+  align-self: center;
+  display: flex;
+  gap: 22px;
+}
+
+/* outro -e*/
 /*----------| bouton nav-left |----------*/
 @media (min-width: 768px) {
   .nav-left.deployed + main {
@@ -766,6 +783,7 @@ article p {
 
 /* button -e */
 .nav-left {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
@@ -881,6 +899,94 @@ article p {
 }
 
 /*scrollbar -e*/
+.slider {
+  display: grid;
+  grid-auto-rows: 1fr;
+}
+
+.compteur {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  min-width: 60px;
+  max-width: fit-content;
+  height: fit-content;
+  text-align: center;
+  margin: 22px auto auto auto;
+  padding: 1px 10px;
+  color: #f0f0f0;
+  background-color: rgba(49, 71, 102, 0.5);
+  border-radius: 20px;
+  z-index: 20;
+  user-select: none;
+}
+
+.btn-nav-slider {
+  z-index: 30;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  color: #f0f0f0;
+  background-color: rgba(49, 71, 102, 0.5);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  fill: none;
+  stroke: #f0f0f0;
+  stroke-miterlimit: 2;
+  stroke-width: 5px;
+}
+
+.previous {
+  margin: auto auto auto 22px;
+}
+
+.next {
+  margin: auto 22px auto auto;
+}
+
+.btn-nav-slider:hover {
+  background-color: #314766;
+  transform: scale(1.5);
+}
+
+.icon-nav-slider-previous {
+  height: 15px;
+  margin: auto;
+  padding-right: 2px;
+}
+
+.icon-nav-slider-next {
+  height: 15px;
+  margin: auto;
+  padding-left: 2px;
+}
+
+.media-slider {
+  width: 100%;
+  min-width: 344px;
+  max-width: 1322px;
+  height: fit-content;
+  max-height: 70vh;
+  object-fit: contain;
+  background: linear-gradient(135deg, black, 50%, #314766);
+  grid-row: 1/4;
+  grid-column: 1/2;
+  visibility: hidden;
+}
+@media screen and (max-height: 950px) {
+  .media-slider {
+    max-height: 90vh;
+  }
+}
+
+.media-slider-active {
+  visibility: visible;
+}
+
 /*----------| scrollbar |----------*/
 /*scrollbar -s*/
 ::-webkit-scrollbar-track {

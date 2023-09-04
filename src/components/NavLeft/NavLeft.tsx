@@ -8,7 +8,6 @@ import Icon from "../../assets/vectors.js";
 
 export default function NavLeft() {
   const location = useLocation();
-
   console.log(location.pathname);
   const IconBox = new Icon();
   const [display, setDisplay] = useState(false);
@@ -23,8 +22,10 @@ export default function NavLeft() {
   return (
     <>
       <button
+        tabIndex={0}
         onClick={handleClick}
         type="button"
+        aria-label="Ouvrir/Fermer le menu."
         id="nav-left-btn"
       >
         <div
@@ -48,10 +49,11 @@ export default function NavLeft() {
         ref={navLeft}
         className="nav-left"
       >
-        <LogoCard />
+        <LogoCard targetable={!display ? -1 : 0} />
         <ul>
           {projects.map((project: Project) => (
             <MenuItem
+              targetable={!display ? -1 : 0}
               key={`MenuItem-${project.id}`}
               id={project.id}
               menu={project.menu}
@@ -61,6 +63,7 @@ export default function NavLeft() {
         </ul>
         <ul>
           <MenuItem
+            targetable={!display ? -1 : 0}
             key={"MenuItem-about"}
             id="about"
             menu="&Agrave; propos"
@@ -68,6 +71,7 @@ export default function NavLeft() {
             icon={IconBox.aPropos()}
           />
           <MenuItem
+            targetable={!display ? -1 : 0}
             key={"MenuItem-contact"}
             id="mailto:clement.aver@yahoo.fr"
             menu="Me contacter"

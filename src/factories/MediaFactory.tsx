@@ -2,7 +2,7 @@ import Image from "../models/Image";
 import Video from "../models/Video";
 import type { Media } from "../Types";
 
-export default function MediaFactory({ className, src, type, muted, poster, alt, playsInline, autoPlay, loop }: Media) {
+export default function MediaFactory({ className, src, type, muted, poster, alt, playsInline, autoPlay, loop, controls }: Media) {
   if (type) {
     return (
       <Video
@@ -15,6 +15,7 @@ export default function MediaFactory({ className, src, type, muted, poster, alt,
         loop={loop}
         poster={poster}
         className={className}
+        controls={controls}
       />
     );
   } else {

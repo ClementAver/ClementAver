@@ -16,8 +16,39 @@ const projects = [
     },
     medias: [
       {
-        src: "",
-        alt: "",
+        src: "galerieRobillardSite.mp4",
+        type: "video/mp4",
+        poster: "galerieRobillardSite-poster.png",
+        alt: "Vidéo de Présentation du site.",
+      },
+      {
+        src: "slider-robillard-1.png",
+        alt: "présentation du projet figma",
+      },
+      {
+        src: "slider-robillard-2.png",
+        alt: "maquettes liées",
+      },
+      {
+        src: "robillard-slider2-3.png",
+        alt: "maquettes liées",
+      },
+
+      {
+        src: "robillard-slider2-2.png",
+        alt: "maquettes liées",
+      },
+      {
+        src: "robillard-slider2-1.png",
+        alt: "maquettes liées",
+      },
+      {
+        src: "robillard-slider2-4.png",
+        alt: "maquettes liées",
+      },
+      {
+        src: "robillard-slider2-5.png",
+        alt: "maquettes liées",
       },
     ],
   },
@@ -165,6 +196,7 @@ export { projects };
 {
   src: "",
   type: "video/mp4",
+poster: ""
 },
 */
 

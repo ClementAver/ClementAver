@@ -249,7 +249,7 @@ article p {
 }
 
 /* softwares -s */
-.Softwares {
+.softwares {
   display: flex;
   flex-flow: row wrap;
   gap: 12px;
@@ -316,6 +316,7 @@ article p {
 @import "./scss/pages/About.scss";
 @import "./scss/pages/projects.scss";
 @import "./scss/components/NavLeft.scss";
+@import "./scss/components/Slider.scss";
 
 /*----------| scrollbar |----------*/
 
