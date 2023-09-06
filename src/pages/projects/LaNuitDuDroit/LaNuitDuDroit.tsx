@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { projects } from "../../../data/data";
-import type { Project } from "../../../Types";
+import type { Project } from "../../../types";
+import ProjectIntro from "../../../components/ProjectIntro/ProjectIntro";
+import ProjectOutro from "../../../components/ProjectOutro/ProjectOutro";
+import MediaTile from "../../../components/tiles/MediaTile/MediaTile";
 
 export default function LaNuitDuDroit() {
   const [project, setProject] = useState<Project>();
@@ -10,12 +13,38 @@ export default function LaNuitDuDroit() {
   useEffect(() => {
     const project = projects.filter((project) => project.id === id)[0];
     setProject(project);
-    console.log(project);
   }, []);
 
   return (
-    <main>
-      <h1>{project?.title}</h1>
+    <main className="projects">
+      <h1 className="sr-only">{project?.title}</h1>
+      {project && <ProjectIntro project={project} />}
+
+      {project && (
+        <MediaTile
+          id="presentation-du-site"
+          media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: true }}
+          description="Série de gifs réalisée par régions afin de communiquer sur les évènements des différents territoires."
+          softwares={["ae"]}
+        />
+      )}
+      {project && (
+        <MediaTile
+          id="animation-de-l-evenement"
+          media={{ className: "media", src: `${project.medias[1].src}`, alt: `${project.medias[1].alt}` }}
+          description="Série de gifs réalisée par régions afin de communiquer sur les évènements des différents territoires."
+          softwares={["fi", "ps"]}
+        />
+      )}
+      {project && (
+        <MediaTile
+          id="animation-de-l-evenement"
+          media={{ className: "media", src: `${project.medias[2].src}`, alt: `${project.medias[2].alt}` }}
+          description="Série de gifs réalisée pour promouvoir les principaux évènements de La Nuit du Droit."
+          softwares={["fi", "ps"]}
+        />
+      )}
+      <ProjectOutro quote="Et ils vécurent heureux." />
     </main>
   );
 }

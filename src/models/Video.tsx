@@ -1,4 +1,4 @@
-import type { Video } from "../Types";
+import type { Video } from "../types";
 
 export default function Video({ className, poster, src, type, muted, alt, playsInline, autoPlay, loop, controls }: Video) {
   // const url = () => `https://clementaver.github.io/ClementAver/assets/videos/${src}`;

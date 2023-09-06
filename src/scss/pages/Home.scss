@@ -18,9 +18,7 @@
       scroll-snap-align: none;
     }
   }
-  /*main-containers -e*/
 
-  /* template projet -s*/
   .container-projet {
     max-width: 100%;
     max-height: 100%;
@@ -29,10 +27,13 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 650px));
     grid-template-rows: repeat(auto-fit, minmax(300px, 50vh));
 
-    justify-content: center;
-    align-content: center;
+    @media screen and (max-width: 768px) {
+      grid-template-rows: repeat(auto-fit, minmax(300px, 480px));
+    }
 
+    justify-content: center;
     column-gap: 22px;
+
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -60,23 +61,36 @@
 
     padding: 22px 35px 35px 22px;
     color: $colorOne;
-  }
+    h2 {
+      color: inherit;
+    }
 
-  .description h2 {
-    color: inherit;
-  }
+    p {
+      color: inherit;
+    }
 
-  .description p {
-    color: inherit;
-  }
+    span {
+      color: inherit;
+    }
 
-  .description button {
-    color: inherit;
-  }
+    button {
+      margin-top: 0.5rem;
+      color: inherit;
 
-  .description button a {
-    color: inherit;
-    transition: border-bottom 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      a {
+        color: inherit;
+        transition: border-bottom 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      }
+    }
+
+    .truncate {
+      box-sizing: border-box;
+      overflow: hidden;
+      line-height: 1.2;
+      max-height: calc(1.2rem * 4);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
   }
-  /* template projet -e*/
 }

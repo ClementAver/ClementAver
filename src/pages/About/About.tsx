@@ -4,7 +4,7 @@ export default function About() {
       <section className="container-slide-intro">
         <img
           className="portrait"
-          src="./visuels/20210913-Clement-Aver-web-square-blue.png"
+          src="./assets/images/20210913-Clement-Aver-web-square-blue.png"
           alt="portrait de Clément Aver"
         />
 
@@ -125,7 +125,7 @@ export default function About() {
             <p>Très bon niveau d'anglais</p>
           </article>
         </div>
-        <svg
+        {/* <svg
           id="logo-stamp"
           viewBox="0 0 30.96 30.96"
         >
@@ -133,7 +133,7 @@ export default function About() {
             <path d="M8.43,24v1l-1-1V23h1Zm12,0h-3l-1,1h-2l-1-1h-3V23l1-1V21l1,1,1,1,1,1,1-1-1-1V21h2v1l-1,1,1,1,1-1,1-1,1-1v1l1,1Zm-7-6V17l1,1-1,1h-2l-1-1,1-1h1v1Zm6,1h-2l-1-1,1-1h1v1h1V17l1,1Zm4,5-1,1V23h1Zm1-1V22l-1-1-1-1V9l-1,1v1l-1,1v2l1,1h-1l-1-1V13l1-1V11l1-1V9l1-1V7l-1,1-1,1-1,1-1,1-1,1-1,1h-2l-1-1-1-1-1-1-1-1-1-1-1-1V8l1,1v1l1,1v1l1,1v1l-1,1h-1l1-1V12l-1-1V10l-1-1V20l-1,1-1,1v1l-1-1,1-1,1-1V16l1-1-1-1V7l1-1,1,1,1,1,1,1,1,1,1,1,1,1h2l1-1,1-1,1-1,1-1,1-1,1-1,1,1v7l-1,1,1,1v4l1,1,1,1Z" />
             <path d="M15.43,31a15.49,15.49,0,1,1,.08,0Zm0-30A14.53,14.53,0,1,0,30,15.49v-.06A14.54,14.54,0,0,0,15.43,1Z" />
           </g>
-        </svg>
+        </svg> */}
       </section>
     </main>
   );

@@ -3,8 +3,13 @@ import Home from "./pages/Home/Home";
 import NavLeft from "./components/NavLeft/NavLeft";
 import GalerieRobillard from "./pages/projects/GalerieRobillard/GalerieRobillard";
 import LaNuitDuDroit from "./pages/projects/LaNuitDuDroit/LaNuitDuDroit";
+import Perial from "./pages/projects/Perial/Perial";
 import About from "./pages/About/About";
 import ScrollToAnchor from "./utils/ScrollToAnchor/ScrollToAnchor";
+import LabelISR from "./pages/projects/LabelISR/LabelISR";
+import FFB from "./pages/projects/FFB/FFB";
+import Tisseo from "./pages/projects/Tisseo/Tisseo";
+import LaPoste from "./pages/projects/LaPoste/LaPoste";
 
 export default function App() {
   return (
@@ -25,12 +30,28 @@ export default function App() {
           element={<LaNuitDuDroit />}
         />
         <Route
-          path="/about"
-          element={<About />}
+          path="/perial"
+          element={<Perial />}
         />
         <Route
-          path="/contact"
-          element={<LaNuitDuDroit />}
+          path="/labelisr"
+          element={<LabelISR />}
+        />
+        <Route
+          path="/ffb"
+          element={<FFB />}
+        />
+        <Route
+          path="/tisseo"
+          element={<Tisseo />}
+        />
+        <Route
+          path="/laposte"
+          element={<LaPoste />}
+        />
+        <Route
+          path="/about"
+          element={<About />}
         />
       </Routes>
     </div>

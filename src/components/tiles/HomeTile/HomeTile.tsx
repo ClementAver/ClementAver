@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import type { Project } from "../../../Types";
+import type { Project } from "../../../types";
 import MediaFactory from "../../../factories/MediaFactory";
 import main from "../../../scss/globals/main.module.scss";
 
@@ -82,32 +82,17 @@ export default function HomeTile({ project }: { key: string; project: Project })
         >
           <h2>{title}</h2>
 
-          <p className="rubriquage">
+          <span className="rubriquage">
             {tags.map((tag, index) => {
               const key = `tag-${index}`;
               if (index !== 0) {
-                return (
-                  <span
-                    className="rubriquage"
-                    key={key}
-                  >
-                    , {tag}
-                  </span>
-                );
+                return <span key={key}>, {tag}</span>;
               }
-              return (
-                <span
-                  className="rubriquage"
-                  key={key}
-                >
-                  {tag}
-                </span>
-              );
+              return <span key={key}>{tag}</span>;
             })}
-          </p>
-          <p>{work}</p>
-          <p>{summary}</p>
-          <br />
+          </span>
+          <p className="truncate">{work}</p>
+          <p className="truncate">{summary}</p>
           <button
             type="button"
             draggable="false"

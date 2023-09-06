@@ -1,11 +1,5 @@
-/*----------| main |----------*/
-
-/*main-containers -s*/
 .projects {
-  .main-content {
-    grid-area: content;
-  }
-
+  /*main-containers -s*/
   .container-slide {
     scroll-snap-align: start;
 
@@ -20,6 +14,11 @@
     overflow-x: hidden;
 
     @media screen and (max-height: 950px) {
+      scroll-snap-align: none;
+      min-height: fit-content;
+    }
+
+    @media screen and (max-width: 768px) {
       scroll-snap-align: none;
       min-height: fit-content;
     }
@@ -72,7 +71,7 @@
     grid-template-areas: "left right";
   }
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: 768px) {
     margin: 22px 22px;
   }
 }
@@ -123,11 +122,10 @@
     align-content: center;
   }
 }
-/*-*/
 
 .media-description h2 {
   font-size: 1.2rem;
-  padding-bottom: 0;
+  margin-bottom: 0;
   color: inherit;
 }
 
@@ -142,5 +140,45 @@
 
   display: flex;
   gap: 22px;
+
+  a {
+    background-color: rgba(0, 0, 0, 0);
+
+    width: fit-content;
+    height: fit-content;
+
+    display: block;
+
+    padding: 0.7rem;
+    border-bottom: 1px solid $colorOne;
+
+    &:hover {
+      background-color: $colorThree;
+    }
+
+    &:active {
+      background-color: $colorFive;
+    }
+  }
 }
+
+.modal {
+  z-index: 200;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__media {
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  }
+}
+
 /* outro -e*/

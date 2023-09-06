@@ -1,13 +1,14 @@
-import type { MediaTile } from "../../../Types";
+import type { MediaTile } from "../../../types";
 import MediaFactory from "../../../factories/MediaFactory";
 import Softwares from "../../Softwares/Softwares";
 
-export default function MediaTile({ id, media, description, softwares }: MediaTile) {
+export default function MediaTile({ id, media, description, softwares, noDescription }: MediaTile) {
   return (
     <section
       className="container-slide"
       id={id}
     >
+      {description && noDescription && <h2 className="sr-only">{description}</h2>}
       <div className="container-media">
         <MediaFactory
           src={media.src}
@@ -21,8 +22,7 @@ export default function MediaTile({ id, media, description, softwares }: MediaTi
           className={media.className}
           controls={media.controls}
         />
-
-        {description && (
+        {description && !noDescription && (
           <div className="media-description">
             <h2>{description}</h2>
 

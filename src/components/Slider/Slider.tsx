@@ -2,7 +2,7 @@ import { useState } from "react";
 import MediaFactory from "../../factories/MediaFactory";
 
 import Softwares from "../Softwares/Softwares";
-import { Media, Slider } from "../../Types";
+import { Media, Slider } from "../../types";
 import Previous from "../buttons/Previous";
 import Next from "../buttons/Next";
 
@@ -26,8 +26,6 @@ export default function Slider({ medias, description, softwares, id }: Slider) {
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
-    console.log(e.key);
-
     switch (e.key) {
       case "ArrowLeft":
         handlePrevious();

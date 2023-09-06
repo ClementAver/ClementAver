@@ -1,6 +1,6 @@
 import Image from "../models/Image";
 import Video from "../models/Video";
-import type { Media } from "../Types";
+import type { Media } from "../types";
 
 export default function MediaFactory({ className, src, type, muted, poster, alt, playsInline, autoPlay, loop, controls }: Media) {
   if (type) {

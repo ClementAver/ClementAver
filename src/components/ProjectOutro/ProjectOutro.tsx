@@ -6,19 +6,16 @@ export default function ProjectOutro({ quote }: { quote: string }) {
 
   return (
     <section
-      className="container-slide"
+      className="container-slide f-h"
       id="outro"
     >
       <div className="container-full-height">
         <h2>{quote}</h2>
 
         <div className="boutons-multiples">
-          <button type="button">
-            <Link to="/">Retour à l'accueil</Link>
-          </button>
-          <button type="button">
-            <Link to={`#intro`}>Haut de page</Link>
-          </button>
+          <Link to="/">Retour à l'accueil</Link>
+
+          <Link to={`#intro`}>Haut de page</Link>
         </div>
       </div>
     </section>

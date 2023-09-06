@@ -1,4 +1,4 @@
-import type { Project } from "../../Types";
+import type { Project } from "../../types";
 
 export default function ProjectIntro({ project }: { project: Project }) {
   const { title, tags, date, work, summary, logo } = project;
@@ -9,8 +9,9 @@ export default function ProjectIntro({ project }: { project: Project }) {
   return (
     <section
       id="intro"
-      className="container-slide"
+      className="container-slide f-h"
     >
+      <h2 className="sr-only">{title}</h2>
       <article className="container-full-height">
         <img
           className="logo-projet"
@@ -18,32 +19,17 @@ export default function ProjectIntro({ project }: { project: Project }) {
           alt={logoAlt}
         />
 
-        <h1>{title}</h1>
-
-        <p className="rubriquage">
+        <h2 className="main-title">{title}</h2>
+        <span className="rubriquage">
           {tags.map((tag, index) => {
             const key = `tag-${index}`;
             if (index !== 0) {
-              return (
-                <span
-                  className="rubriquage"
-                  key={key}
-                >
-                  , {tag}
-                </span>
-              );
+              return <span key={key}>, {tag}</span>;
             }
-            return (
-              <span
-                className="rubriquage"
-                key={key}
-              >
-                {tag}
-              </span>
-            );
+            return <span key={key}>{tag}</span>;
           })}
-          {`, ${date}`}
-        </p>
+          <span>{`, ${date}`}</span>
+        </span>
 
         <p>{work}</p>
         <p>•</p>

@@ -3,12 +3,11 @@ import { useLocation } from "react-router-dom";
 import LogoCard from "../LogoCard/LogoCard";
 import { projects } from "../../data/data";
 import MenuItem from "../MenuItem/MenuItem";
-import type { Project } from "../../Types";
+import type { Project } from "../../types.js";
 import Icon from "../../assets/vectors.js";
 
 export default function NavLeft() {
   const location = useLocation();
-  console.log(location.pathname);
   const IconBox = new Icon();
   const [display, setDisplay] = useState(false);
 
@@ -21,34 +20,35 @@ export default function NavLeft() {
 
   return (
     <>
-      <button
+      <div
         tabIndex={0}
         onClick={handleClick}
-        type="button"
         aria-label="Ouvrir/Fermer le menu."
         id="nav-left-btn"
+        role="button"
       >
         <div
-          id="sgmt-btn-nav-left"
+          className="sgmt-btn-nav-left"
           style={display ? { transform: "rotate(45deg)" } : { transform: "rotate(0deg)" }}
         ></div>
         <div
-          id="sgmt-btn-nav-left"
+          className="sgmt-btn-nav-left"
           style={display ? { transform: "rotate(-45deg)" } : { transform: "rotate(0deg)" }}
         ></div>
         <div
-          id="sgmt-btn-nav-left"
+          className="sgmt-btn-nav-left"
           style={display ? { transform: "translateY(-5px) scale(0)" } : { transform: "translateY(-5px) scale(1)" }}
         ></div>
         <div
-          id="sgmt-btn-nav-left"
+          className="sgmt-btn-nav-left"
           style={display ? { transform: "translateY(5px) scale(0)" } : { transform: "translateY(5px) scale(1)" }}
         ></div>
-      </button>
+      </div>
       <nav
         ref={navLeft}
         className="nav-left"
       >
+        <div style={{ marginTop: "auto", paddingTop: "0.5rem" }}></div>
         <LogoCard targetable={!display ? -1 : 0} />
         <ul>
           {projects.map((project: Project) => (
@@ -79,6 +79,7 @@ export default function NavLeft() {
             icon={IconBox.contact()}
           />
         </ul>
+        <div style={{ marginBottom: "auto", paddingBottom: "1rem" }}></div>
       </nav>
     </>
   );

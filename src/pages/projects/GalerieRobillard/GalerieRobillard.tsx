@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { projects } from "../../../data/data";
-import type { Project } from "../../../Types";
+import type { Project } from "../../../types";
 import ProjectIntro from "../../../components/ProjectIntro/ProjectIntro";
 import ProjectOutro from "../../../components/ProjectOutro/ProjectOutro";
 import MediaTile from "../../../components/tiles/MediaTile/MediaTile";
@@ -8,12 +8,6 @@ import Slider from "../../../components/Slider/Slider";
 
 export default function GalerieRobillard() {
   const [project, setProject] = useState<Project>();
-
-  window.addEventListener("keyup", (e) => {
-    if (e.key === "Tab") {
-      console.log(e.target);
-    }
-  });
 
   const id = "galerierobillard";
 
@@ -24,30 +18,32 @@ export default function GalerieRobillard() {
 
   return (
     <main className="projects">
+      <h1 className="sr-only">{project?.title}</h1>
       {project && <ProjectIntro project={project} />}
       {project && (
         <MediaTile
-          id="Présentation"
+          id="presentation-du-site"
           media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: true }}
-          // description="Vidéo de Présentation du site."
+          description="Vidéo de Présentation du site."
+          noDescription
           softwares={["fi", "ae"]}
         />
       )}
 
       {project && (
         <Slider
-          id="Présentation du site"
+          id="projet-figma"
           medias={[
             { className: "media-slider", src: `${project.medias[1].src}`, alt: `${project.medias[1].alt}` },
             { className: "media-slider", src: `${project.medias[2].src}`, alt: `${project.medias[2].alt}` },
           ]}
           description="Conception des maquettes sur figma permettant une présentation dynamique au client."
-          softwares={["fi", "ae"]}
+          softwares={["fi", "ai"]}
         />
       )}
       {project && (
         <Slider
-          id="Présentation du site"
+          id="détails-des-maquettes"
           medias={[
             { className: "media-slider", src: `${project.medias[3].src}`, alt: `${project.medias[3].alt}` },
             { className: "media-slider", src: `${project.medias[4].src}`, alt: `${project.medias[4].alt}` },
@@ -55,11 +51,12 @@ export default function GalerieRobillard() {
             { className: "media-slider", src: `${project.medias[6].src}`, alt: `${project.medias[6].alt}` },
             { className: "media-slider", src: `${project.medias[7].src}`, alt: `${project.medias[7].alt}` },
           ]}
-          // description="Conception des maquettes sur figma permettant une présentation dynamique au client."
+          description="Conception des maquettes sur figma permettant une présentation dynamique au client."
+          noDescription
           softwares={["fi", "ae"]}
         />
       )}
-      <ProjectOutro quote="Et ils vécurent heureux."/>
+      <ProjectOutro quote="That's all folks" />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import { projects } from "../../data/data";
 
 import HomeTile from "../../components/tiles/HomeTile/HomeTile";
-import type { Project } from "../../Types";
+import type { Project } from "../../types";
 
 export default function Home() {
   return (

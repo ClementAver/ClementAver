@@ -1,12 +1,12 @@
-/*----------| bouton nav-left |----------*/
-
+// the main markup will be resized when the menu is deployed.
 .nav-left.deployed + main {
-  @media (min-width: $md) {
+  @media (min-width: 768px) {
     margin-left: 240px;
   }
 }
 
 /* button -s */
+
 #nav-left-btn {
   border: none;
 
@@ -22,16 +22,19 @@
   height: 30px;
   transition: background-color 0.3s ease-in-out;
   background-color: $colorTwo;
+  display: flex;
+
+  align-items: center;
 
   &:hover {
     background-color: $colorFour;
 
-    #sgmt-btn-nav-left {
+    .sgmt-btn-nav-left {
       border-top: 0.15rem solid $colorTwo;
     }
   }
 
-  #sgmt-btn-nav-left {
+  .sgmt-btn-nav-left {
     border-top: 0.15rem solid $colorOne;
     position: absolute;
 
@@ -43,6 +46,7 @@
 }
 /* button -e */
 
+/* menu -s */
 .nav-left {
   z-index: 100;
   position: fixed;
@@ -66,14 +70,14 @@
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
   }
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   ul {
     display: flex;
     flex-flow: column nowrap;
     gap: 2px;
-
-    &:last-child {
-      margin-bottom: auto;
-    }
   }
 
   li {
@@ -114,13 +118,13 @@
       font-weight: 500;
     }
 
-    a#page-active {
+    a.page-active {
       color: $colorFour;
       fill: $colorFour;
       font-weight: 600;
     }
 
-    a#page-active:hover {
+    a.page-active:hover {
       fill: $colorOne;
       color: $colorOne;
     }
@@ -136,7 +140,6 @@
 
   width: 218px;
   padding: 6px 6px 6px 11px;
-  margin-top: auto;
 
   transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transform: translateX(11px);
@@ -167,19 +170,10 @@
   color: $colorTwo;
 }
 
-/* picto -s */
 .left-nav-picto {
   max-width: 1.5rem;
   fill: inherit;
   align-self: center;
   margin-right: 0.42rem;
 }
-/* picto -e */
-
-/*----------| scrollbar |----------*/
-
-/*scrollbar -s*/
-.nav-left::-webkit-scrollbar {
-  display: none;
-}
-/*scrollbar -e*/
+/* menu -e */
