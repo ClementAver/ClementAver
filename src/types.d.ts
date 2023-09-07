@@ -19,11 +19,11 @@ export type Image = {
   className?: string;
 };
 
-export type Media = { className?: string; src: string; type?: string; alt?: string; poster?: string; muted?: boolean; controls?: boolean; playsInline?: boolean; autoPlay?: boolean; loop?: boolean; };
+export type Media = { className?: string; src: string; type?: string; alt?: string; poster?: string; muted?: boolean; controls?: boolean; playsInline?: boolean; autoPlay?: boolean; loop?: boolean };
 
 export type MenuItem = {
   id: string;
-  menu: string;
+  name: string;
   path: string;
   icon?: ReactElement;
   targetable?: number;
@@ -31,7 +31,7 @@ export type MenuItem = {
 
 export interface Project {
   id: string;
-  menu: string;
+  name: string;
   logo: {
     src: string;
     alt: string;

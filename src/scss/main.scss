@@ -128,6 +128,7 @@ video {
 
 html {
   overflow: hidden;
+  background: $colorTwo;
 }
 
 body {
@@ -155,8 +156,6 @@ body {
 }
 
 main {
-  background: $colorTwo;
-
   height: 100vh;
 
   scroll-snap-type: y mandatory;
@@ -166,17 +165,6 @@ main {
   overflow-x: hidden;
 
   transition: margin-left 0.3s ease-in-out;
-
-  &.project {
-    display: grid;
-
-    grid-template-columns: 1fr 0px;
-    grid-template-areas: "content summary";
-
-    @media screen and (min-width: 1846px) {
-      grid-template-columns: 1fr 240px;
-    }
-  }
 }
 
 a {
@@ -414,3 +402,4 @@ main::-webkit-scrollbar {
 @import "./pages/projects.scss";
 @import "./components/NavLeft.scss";
 @import "./components/Slider.scss";
+@import "./components/NavRight.scss";

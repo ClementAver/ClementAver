@@ -5,6 +5,7 @@ import ProjectIntro from "../../../components/ProjectIntro/ProjectIntro";
 import ProjectOutro from "../../../components/ProjectOutro/ProjectOutro";
 import MediaTile from "../../../components/tiles/MediaTile/MediaTile";
 import Slider from "../../../components/Slider/Slider";
+import NavRight from "../../../components/NavRight/NavRight";
 
 export default function GalerieRobillard() {
   const [project, setProject] = useState<Project>();
@@ -43,7 +44,7 @@ export default function GalerieRobillard() {
       )}
       {project && (
         <Slider
-          id="détails-des-maquettes"
+          id="details-des-maquettes"
           medias={[
             { className: "media-slider", src: `${project.medias[3].src}`, alt: `${project.medias[3].alt}` },
             { className: "media-slider", src: `${project.medias[4].src}`, alt: `${project.medias[4].alt}` },
@@ -57,6 +58,35 @@ export default function GalerieRobillard() {
         />
       )}
       <ProjectOutro quote="That's all folks" />
+      <NavRight
+      // sections={[
+      //   {
+      //     id: "intro",
+      //     name: "Présentation",
+
+      //   },
+      //   {
+      //     id: "presentation-du-site",
+      //     name: "Présentation du site",
+
+      //   },
+      //   {
+      //     id: "projet-figma",
+      //     name: "Projet Figma",
+
+      //   },
+      //   {
+      //     id: "details-des-maquettes",
+      //     name: "Détails des maquettes",
+
+      //   },
+      //   {
+      //     id: "outro",
+      //     name: "Bas de page",
+
+      //   },
+      // ]}
+      />
     </main>
   );
 }

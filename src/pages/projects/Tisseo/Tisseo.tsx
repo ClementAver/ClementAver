@@ -9,7 +9,7 @@ import Slider from "../../../components/Slider/Slider";
 export default function Tisseo() {
   const [project, setProject] = useState<Project>();
 
-  const id = "perial";
+  const id = "tisseo";
 
   useEffect(() => {
     const project = projects.filter((project) => project.id === id)[0];
@@ -23,48 +23,33 @@ export default function Tisseo() {
 
       {project && (
         <MediaTile
-          id="bee-otels"
+          id="animation"
           media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: true }}
-          description="Animation réalisée pour promouvoir l'installation de ruches en partenariat avec la société Beeodiversity sur plusieurs sites gérés par la SCPI PFO₂."
+          description="Livrable calibré sur six secondes avec un viseul simple animé ainsi qu'une accroche courte et assurée."
           softwares={["ae"]}
+        />
+      )}
+      {project && (
+        <Slider
+          id="details-du-bus"
+          medias={[
+            { className: "media-slider", src: `${project.medias[1].src}`, alt: `${project.medias[1].alt}` },
+            { className: "media-slider", src: `${project.medias[2].src}`, alt: `${project.medias[2].alt}` },
+            { className: "media-slider", src: `${project.medias[3].src}`, alt: `${project.medias[3].alt}` },
+          ]}
+          description="Tracé du bus, puis réglage des pleins et contours, et animation."
+          softwares={["ai", "ae"]}
         />
       )}
       {project && (
         <MediaTile
-          id="la-marseillaise"
-          media={{ className: "media", type: "video/mp4", src: `${project.medias[1].src}`, poster: `${project.medias[1].poster}`, alt: `${project.medias[1].alt}`, controls: true, muted: true }}
-          description="Animation réalisée pour annoncer l'acquisition de la tour « La Marseillaise » pour le compte de fonds gérés par PERIAL AM."
-          softwares={["ae"]}
-        />
-      )}
-      {project && (
-        <Slider
-          id="projet-figma"
-          medias={[
-            { className: "media-slider", src: `${project.medias[2].src}`, alt: `${project.medias[2].alt}` },
-            { className: "media-slider", src: `${project.medias[3].src}`, alt: `${project.medias[3].alt}` },
-            { className: "media-slider", src: `${project.medias[4].src}`, alt: `${project.medias[4].alt}` },
-            { className: "media-slider", src: `${project.medias[5].src}`, alt: `${project.medias[5].alt}` },
-          ]}
-          description="Carrousel réalisé pour les réseaux sociaux de Perial AM afin de mettre l'accent sur une acquisition marquante de l'année passée."
-          softwares={["in"]}
-        />
-      )}
-      {project && (
-        <Slider
-          id="projet-figma"
-          medias={[
-            { className: "media-slider", src: `${project.medias[6].src}`, alt: `${project.medias[6].alt}` },
-            { className: "media-slider", src: `${project.medias[7].src}`, alt: `${project.medias[7].alt}` },
-            { className: "media-slider", src: `${project.medias[8].src}`, alt: `${project.medias[8].alt}` },
-            { className: "media-slider", src: `${project.medias[9].src}`, alt: `${project.medias[9].alt}` },
-          ]}
-          description="Carrousel réalisé pour les réseaux sociaux de Perial AM afin de communiquer sur une acquisition du trimestre révolu."
-          softwares={["in"]}
+          id="N'est-il pas mignon ?"
+          media={{ className: "media", src: `${project.medias[4].src}`, alt: `${project.medias[4].alt}` }}
+          noDescription
         />
       )}
 
-      <ProjectOutro quote="SEE YOU SPACE COWBOY…" />
+      <ProjectOutro quote="À plus dans le bus !" />
     </main>
   );
 }

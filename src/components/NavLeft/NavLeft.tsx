@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import LogoCard from "../LogoCard/LogoCard";
 import { projects } from "../../data/data";
-import MenuItem from "../MenuItem/MenuItem";
+import MenuItem from "../menuItems/MenuItemLeft.js";
 import type { Project } from "../../types.js";
 import Icon from "../../assets/vectors.js";
 
@@ -56,8 +56,9 @@ export default function NavLeft() {
               targetable={!display ? -1 : 0}
               key={`MenuItem-${project.id}`}
               id={project.id}
-              menu={project.menu}
+              name={project.name}
               path={location.pathname}
+            
             />
           ))}
         </ul>
@@ -66,17 +67,19 @@ export default function NavLeft() {
             targetable={!display ? -1 : 0}
             key={"MenuItem-about"}
             id="about"
-            menu="&Agrave; propos"
+            name="&Agrave; propos"
             path={location.pathname}
             icon={IconBox.aPropos()}
+          
           />
           <MenuItem
             targetable={!display ? -1 : 0}
             key={"MenuItem-contact"}
             id="mailto:clement.aver@yahoo.fr"
-            menu="Me contacter"
+            name="Me contacter"
             path={location.pathname}
             icon={IconBox.contact()}
+          
           />
         </ul>
         <div style={{ marginBottom: "auto", paddingBottom: "1rem" }}></div>

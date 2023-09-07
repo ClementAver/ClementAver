@@ -1,7 +1,7 @@
 const projects = [
   {
     id: "galerierobillard",
-    menu: "Galerie robillard",
+    name: "Galerie robillard",
     logo: { src: "logo-galerie-robillard.svg", alt: "Logo de la Galerie Robillard." },
     title: "Galerie Robillard",
     tags: ["Identité visuelle", "maquettage web"],
@@ -54,7 +54,7 @@ const projects = [
   },
   {
     id: "lanuitdudroit",
-    menu: "La Nuit Du Droit",
+    name: "La Nuit Du Droit",
     logo: { src: "Logo-LNDD.svg", alt: "Logo de La Nuit Du Droit." },
     title: "La Nuit du Droit",
     tags: ["Animation", "Réseaux sociaux"],
@@ -86,7 +86,7 @@ const projects = [
   },
   {
     id: "perial",
-    menu: "Perial AM",
+    name: "Perial AM",
     logo: { src: "Logo-PerialAM.svg", alt: "Logo de Périal AM" },
     title: "Périal",
     tags: ["Réseaux sociaux"],
@@ -149,7 +149,7 @@ const projects = [
   },
   {
     id: "labelisr",
-    menu: "Label ISR",
+    name: "Label ISR",
     logo: { src: "label-isr-RF.svg", alt: "Logo du Label ISR." },
     title: "Label ISR",
     tags: ["Réseaux sociaux"],
@@ -223,7 +223,7 @@ const projects = [
   },
   {
     id: "ffb",
-    menu: "FFB",
+    name: "FFB",
     logo: { src: "FFB-logo.svg", alt: "Logo de la Fédération Française de Béhourd." },
     title: "Fédération Française de Béhourd",
     tags: ["Identité visuelle", "Déclinaison imprimée"],
@@ -273,7 +273,7 @@ const projects = [
   },
   {
     id: "tisseo",
-    menu: "Tisséo",
+    name: "Tisséo",
     logo: { src: "Logo-Tisseo.svg", alt: "Logo de Tisséo Voyageurs." },
     title: "Tisséo voyageurs",
     tags: ["Animation fictive"],
@@ -288,14 +288,32 @@ const projects = [
     },
     medias: [
       {
-        src: "",
-        alt: "",
+        src: "Tisseo-App-noir.mp4",
+        type: "video/mp4",
+        poster: "Tisseo-App-noir-poster.png",
+        alt: "Animation livrable. à gauche les informations textuelles, à droite un mock-up contenant une animation de bus et de lignes courbes pointillées représantant les trajets urbains.",
+      },
+      {
+        src: "tracé.png",
+        alt: "Tracé illustrator du bus selon une grille 3D.",
+      },
+      {
+        src: "plein.png",
+        alt: "Bus avec contours et couleur.",
+      },
+      {
+        src: "projet-after.png",
+        alt: "Capture d'écran du projet After Effects.",
+      },
+      {
+        src: "bus.gif",
+        alt: "animation du bus au format gif",
       },
     ],
   },
   {
     id: "laposte",
-    menu: "La Poste",
+    name: "La Poste",
     logo: { src: "logo-la-poste.svg", alt: "Logo de La Poste" },
     title: "La Poste",
     tags: ["Animation fictive"],
@@ -310,32 +328,27 @@ const projects = [
     },
     medias: [
       {
-        src: "",
-        alt: "",
+        src: "uneLettreALaPoste.mp4",
+        type: "video/mp4",
+        poster: "uneLettreALaPoste-poster.jpg",
+        alt: "Animation livrable. Animation de visuels illustrant les textes au-dessous. Textes décrivant les différentes étapes du trajet d'une lettre.",
+      },
+      {
+        src: "traceBoitePostale.png",
+        alt:"Montage tracé/rendu final de l'illustration d'une boîte postale.",
+      },
+      {
+        src: "traceCentreTri.png",
+        alt:"Montage tracé/rendu final de l'illustration d'un chariot de tri.",
+      },
+      {
+        src: "détails-animation.mp4",
+        type: "video/mp4",
+        poster: "détails-animation-poster.png",
+        alt: "Animation bouclant les animations de la vidéo à un rythme plus élevé.",
       },
     ],
   },
 ];
 
 export { projects };
-
-/*
-{
-  src: "",
-  alt: "",
-},
-{
-  src: "",
-  type: "video/mp4",
-  poster: ""
-},
-*/
-
-/*
- medias: [
-      {
-  src: "",
-  alt: "",
-},
-    ],
-*/

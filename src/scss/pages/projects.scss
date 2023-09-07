@@ -1,4 +1,15 @@
 .projects {
+  margin-right: 0;
+  transition: margin-right 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+
+  @media screen and (min-width: 1846px) {
+    margin-right: 240px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   /*main-containers -s*/
   .container-slide {
     scroll-snap-align: start;
@@ -64,12 +75,8 @@
 .container-media {
   display: grid;
   margin: 22px 0;
+  padding: 0;
   column-gap: 22px;
-
-  @media screen and (min-width: 1846px) {
-    display: grid;
-    grid-template-areas: "left right";
-  }
 
   @media screen and (min-width: 768px) {
     margin: 22px 22px;
