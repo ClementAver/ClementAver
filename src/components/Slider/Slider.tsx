@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import MediaFactory from "../../factories/MediaFactory";
 
 import Softwares from "../Softwares/Softwares";
@@ -8,6 +8,25 @@ import Next from "../buttons/Next";
 
 export default function Slider({ medias, description, softwares, id }: Slider) {
   const [count, setCount] = useState<number>(0);
+  const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
+
+  const section = useRef<HTMLDivElement | null>(null);
+
+  function handleIntersecting(entries: IntersectionObserverEntry[]) {
+    const entry = entries[0];
+    setIsIntersecting(entry.isIntersecting);
+  }
+
+  useEffect(() => {
+    const refCopy = section.current;
+
+    const observer = new IntersectionObserver(handleIntersecting, { root: null, rootMargin: "0px", threshold: 0.6 });
+    if (section.current) observer.observe(section.current);
+
+    return () => {
+      if (refCopy) observer.unobserve(refCopy);
+    };
+  }, [section]);
 
   const handlePrevious = () => {
     count > 0 ? setCount(count - 1) : setCount(medias.length - 1);
@@ -37,7 +56,8 @@ export default function Slider({ medias, description, softwares, id }: Slider) {
 
   return (
     <section
-      className="container-slide"
+      ref={section}
+      className={isIntersecting ? "container-slide intersecting" : "container-slide"}
       id={id}
     >
       <div
