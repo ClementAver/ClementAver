@@ -687,6 +687,7 @@ main::-webkit-scrollbar {
 .projects {
   margin-right: 0;
   transition: margin-right 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+  scrollbar-width: none;
   /*main-containers -s*/
   /*main-containers -e*/
   /* intro -s*/
@@ -863,7 +864,7 @@ main::-webkit-scrollbar {
   position: fixed;
   top: 22px;
   right: 22px;
-  z-index: 90;
+  z-index: 110;
   box-sizing: border-box;
   border-radius: 20px;
   width: 30px;
@@ -1091,10 +1092,10 @@ main::-webkit-scrollbar {
   margin-right: -240px;
   z-index: 100;
   position: fixed;
-  top: 5vh;
+  top: 0;
   right: 0;
   width: 240px;
-  height: 90vh;
+  height: 100vh;
   transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
   display: flex;
   flex-flow: column nowrap;

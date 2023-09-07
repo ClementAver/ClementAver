@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { projects } from "../../../data/data";
 import type { Project } from "../../../types";
 import ProjectIntro from "../../../components/ProjectIntro/ProjectIntro";
@@ -12,6 +12,8 @@ export default function GalerieRobillard() {
 
   const id = "galerierobillard";
 
+  const mediaOne = useRef<HTMLElement>(null);
+  console.log(mediaOne);
   useEffect(() => {
     const project = projects.filter((project) => project.id === id)[0];
     setProject(project);
@@ -28,6 +30,7 @@ export default function GalerieRobillard() {
           description="Vidéo de Présentation du site."
           noDescription
           softwares={["fi", "ae"]}
+        
         />
       )}
 
@@ -59,33 +62,33 @@ export default function GalerieRobillard() {
       )}
       <ProjectOutro quote="That's all folks" />
       <NavRight
-      // sections={[
-      //   {
-      //     id: "intro",
-      //     name: "Présentation",
+      sections={[
+        {
+          id: "intro",
+          name: "Présentation",
 
-      //   },
-      //   {
-      //     id: "presentation-du-site",
-      //     name: "Présentation du site",
+        },
+        {
+          id: "presentation-du-site",
+          name: "Présentation du site",
 
-      //   },
-      //   {
-      //     id: "projet-figma",
-      //     name: "Projet Figma",
+        },
+        {
+          id: "projet-figma",
+          name: "Projet Figma",
 
-      //   },
-      //   {
-      //     id: "details-des-maquettes",
-      //     name: "Détails des maquettes",
+        },
+        {
+          id: "details-des-maquettes",
+          name: "Détails des maquettes",
 
-      //   },
-      //   {
-      //     id: "outro",
-      //     name: "Bas de page",
+        },
+        {
+          id: "outro",
+          name: "Bas de page",
 
-      //   },
-      // ]}
+        },
+      ]}
       />
     </main>
   );
