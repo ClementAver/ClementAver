@@ -23,9 +23,9 @@ export default function NavRight({ sections }: { sections: { id: string; name: s
           <MenuItem
             targetable={winWidth && winWidth >= 1846 ? 0 : -1}
             key={`MenuItem-${section.id}`}
-            id={location.pathname + `#${section.id}`}
+            id={section.id}
             name={section.name}
-            path={location.pathname + location.hash}
+            path={location.pathname + `#${section.id}`}
           />
         ))}
       </ul>

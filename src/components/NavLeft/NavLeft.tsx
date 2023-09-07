@@ -58,7 +58,6 @@ export default function NavLeft() {
               id={project.id}
               name={project.name}
               path={location.pathname}
-            
             />
           ))}
         </ul>
@@ -70,7 +69,6 @@ export default function NavLeft() {
             name="&Agrave; propos"
             path={location.pathname}
             icon={IconBox.aPropos()}
-          
           />
           <MenuItem
             targetable={!display ? -1 : 0}
@@ -79,7 +77,6 @@ export default function NavLeft() {
             name="Me contacter"
             path={location.pathname}
             icon={IconBox.contact()}
-          
           />
         </ul>
         <div style={{ marginBottom: "auto", paddingBottom: "1rem" }}></div>

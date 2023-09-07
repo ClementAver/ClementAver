@@ -14,7 +14,6 @@
   /*main-containers -s*/
   .container-slide {
     scroll-snap-align: start;
-
     min-height: 100vh;
     min-width: 344px;
 
@@ -56,6 +55,7 @@
   .container-flex-intro h1 {
     width: fit-content;
     align-self: center;
+    
 
     &:hover {
       transform: scale(1.2);
