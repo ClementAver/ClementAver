@@ -96,6 +96,7 @@ export default function HomeTile({ project }: { key: string; project: Project })
           <button
             type="button"
             draggable="false"
+            tabIndex={-1}
           >
             <Link
               ref={link}

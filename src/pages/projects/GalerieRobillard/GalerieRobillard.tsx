@@ -18,8 +18,35 @@ export default function GalerieRobillard() {
   }, []);
 
   return (
-    <main className="projects">
+    <main
+      tabIndex={-1}
+      className="projects"
+    >
       <h1 className="sr-only">{project?.title}</h1>
+      <NavRight
+        sections={[
+          {
+            id: "intro",
+            name: "Présentation",
+          },
+          {
+            id: "presentation-du-site",
+            name: "Présentation du site",
+          },
+          {
+            id: "projet-figma",
+            name: "Projet Figma",
+          },
+          {
+            id: "details-des-maquettes",
+            name: "Détails des maquettes",
+          },
+          {
+            id: "outro",
+            name: "Bas de page",
+          },
+        ]}
+      />
       {project && <ProjectIntro project={project} />}
       {project && (
         <MediaTile
@@ -58,30 +85,6 @@ export default function GalerieRobillard() {
         />
       )}
       <ProjectOutro quote="That's all folks" />
-      <NavRight
-        sections={[
-          {
-            id: "intro",
-            name: "Présentation",
-          },
-          {
-            id: "presentation-du-site",
-            name: "Présentation du site",
-          },
-          {
-            id: "projet-figma",
-            name: "Projet Figma",
-          },
-          {
-            id: "details-des-maquettes",
-            name: "Détails des maquettes",
-          },
-          {
-            id: "outro",
-            name: "Bas de page",
-          },
-        ]}
-      />
     </main>
   );
 }

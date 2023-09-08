@@ -13,7 +13,7 @@ export default function NavLeft() {
 
   const navLeft = useRef<HTMLElement>(null);
 
-  const handleClick = () => {
+  const toggleDisplay = () => {
     setDisplay(!display);
     navLeft.current?.classList.toggle("deployed");
   };
@@ -22,7 +22,10 @@ export default function NavLeft() {
     <>
       <div
         tabIndex={0}
-        onClick={handleClick}
+        onClick={toggleDisplay}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") toggleDisplay();
+        }}
         aria-label="Ouvrir/Fermer le menu."
         id="nav-left-btn"
         role="button"

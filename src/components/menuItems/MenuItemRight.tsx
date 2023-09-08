@@ -10,7 +10,6 @@ export default function MenuItem({ id, name, path, targetable }: MenuItem) {
 
     function handleIntersection() {
       const elementIntersecting = document.querySelector(".intersecting");
-      console.log(`elementIntersecting: ${elementIntersecting}, id: ${elementIntersecting?.id}, MenuItem.id: ${id}`);
 
       if (main && elementIntersecting?.id === id) setOnScreen(true);
       else setOnScreen(false);
@@ -21,10 +20,10 @@ export default function MenuItem({ id, name, path, targetable }: MenuItem) {
     }
     hanldeIntersectionWithTimer();
 
-    main[0].addEventListener("scrollend", handleIntersection);
+    main[0].addEventListener("scroll", handleIntersection);
     document.addEventListener("keydown", hanldeIntersectionWithTimer);
     return () => {
-      main[0].removeEventListener("scrollend", handleIntersection);
+      main[0].removeEventListener("scroll", handleIntersection);
       document.removeEventListener("keydown", hanldeIntersectionWithTimer);
     };
   }, [id]);

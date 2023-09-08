@@ -16,7 +16,7 @@ export default function LaNuitDuDroit() {
   }, []);
 
   return (
-    <main className="projects">
+    <main className="projects"    tabIndex={-1}>
       <h1 className="sr-only">{project?.title}</h1>
       {project && <ProjectIntro project={project} />}
 

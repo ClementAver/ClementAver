@@ -5,7 +5,10 @@ import type { Project } from "../../types";
 
 export default function Home() {
   return (
-    <main className="home">
+    <main
+      className="home"
+      tabIndex={-1}
+    >
       {projects.map((project: Project, index) => (
         <HomeTile
           key={`HomeTile-${index}`}

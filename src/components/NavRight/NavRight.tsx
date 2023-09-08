@@ -13,6 +13,7 @@ export default function NavRight({ sections }: { sections: { id: string; name: s
       setWinWidth(window.innerWidth);
     }
 
+    setWinWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
   }, []);
 

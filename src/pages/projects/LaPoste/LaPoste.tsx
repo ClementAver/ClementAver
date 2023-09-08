@@ -18,7 +18,7 @@ export default function LaPoste() {
 
   return (
     project && (
-      <main className="projects">
+      <main className="projects"    tabIndex={-1}>
         <h1 className="sr-only">{project?.title}</h1>
         <ProjectIntro project={project} />
 
