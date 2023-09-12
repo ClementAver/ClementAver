@@ -11,7 +11,7 @@
     display: none;
   }
 
-  /*main-containers -s*/
+  /* main-containers -s */
   .container-slide {
     scroll-snap-align: start;
     min-height: 100vh;
@@ -49,13 +49,12 @@
     text-align: center;
     justify-content: center;
   }
-  /*main-containers -e*/
+  /* main-containers -e */
 
-  /* intro -s*/
+  /* intro -s */
   .container-flex-intro h1 {
     width: fit-content;
     align-self: center;
-    
 
     &:hover {
       transform: scale(1.2);
@@ -69,10 +68,10 @@
     max-height: 300px;
     margin-bottom: 2vh;
   }
-  /* intro -e*/
+  /* intro -e */
 }
 
-/* media -s*/
+/* media -s */
 .container-media {
   display: grid;
   margin: 22px 0;
@@ -140,9 +139,113 @@
 .media-description p {
   color: inherit;
 }
-/* media -e*/
+/* media -e */
 
-/* outro -s*/
+/* slider -s */
+.slider {
+  display: grid;
+  grid-auto-rows: 1fr;
+}
+
+.compteur {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  min-width: 60px;
+  max-width: fit-content;
+
+  height: fit-content;
+  text-align: center;
+  margin: 22px auto auto auto;
+  padding: 1px 10px;
+
+  color: $colorTwo;
+  background-color: $colorOneOpaciteCinquante;
+  border-radius: 20px;
+  z-index: 20;
+
+  user-select: none;
+}
+
+.btn-nav-slider {
+  z-index: 30;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+
+  color: $colorTwo;
+  background-color: $colorOneOpaciteCinquante;
+
+  display: flex;
+  align-items: center;
+
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  cursor: pointer;
+  user-select: none;
+
+  fill: none;
+  stroke: $colorTwo;
+  stroke-miterlimit: 2;
+  stroke-width: 5px;
+}
+
+.previous {
+  margin: auto auto auto 22px;
+}
+
+.next {
+  margin: auto 22px auto auto;
+}
+
+.btn-nav-slider:hover {
+  background-color: $colorOne;
+  transform: scale(1.5);
+}
+
+.icon-nav-slider-previous {
+  height: 15px;
+  margin: auto;
+  padding-right: 2px;
+}
+
+.icon-nav-slider-next {
+  height: 15px;
+  margin: auto;
+  padding-left: 2px;
+}
+
+.media-slider {
+  width: 100%;
+  min-width: 344px;
+  max-width: 1322px;
+
+  height: fit-content;
+  max-height: 70vh;
+
+  object-fit: contain;
+
+  background: linear-gradient(135deg, black, 50%, $colorOne);
+
+  grid-row: 1 / 4;
+  grid-column: 1 / 2;
+
+  visibility: hidden;
+
+  @media screen and (max-height: 950px) {
+    max-height: 90vh;
+  }
+}
+
+.media-slider-active {
+  visibility: visible;
+}
+/* slider -e */
+
+/* outro -s */
 .boutons-multiples {
   align-self: center;
 
@@ -189,4 +292,4 @@
   }
 }
 
-/* outro -e*/
+/* outro -e */

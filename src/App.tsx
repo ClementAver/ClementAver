@@ -12,13 +12,13 @@ import Tisseo from "./pages/projects/Tisseo/Tisseo";
 import LaPoste from "./pages/projects/LaPoste/LaPoste";
 
 export default function App() {
-  document.addEventListener(
-    "focusin",
-    function () {
-      console.log("focused: ", document.activeElement);
-    },
-    true
-  );
+  // document.addEventListener(
+  //   "focusin",
+  //   function () {
+  //     console.log("focused: ", document.activeElement);
+  //   },
+  //   true
+  // );
 
   return (
     <div className="App">

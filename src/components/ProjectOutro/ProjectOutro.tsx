@@ -34,7 +34,7 @@ export default function ProjectOutro({ quote }: { quote: string }) {
         <div className="boutons-multiples">
           <Link to="/">Retour à l'accueil</Link>
 
-          <Link to={`#intro`}>Haut de page</Link>
+          <Link to={"#intro"}>Haut de page</Link>
         </div>
       </div>
     </section>

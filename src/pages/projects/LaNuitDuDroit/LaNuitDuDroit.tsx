@@ -13,17 +13,37 @@ export default function LaNuitDuDroit() {
   useEffect(() => {
     const project = projects.filter((project) => project.id === id)[0];
     setProject(project);
+
+    // Chrome scroll-snap-align fixes :
+    const interval = setInterval(snapFixe);
+
+    function snapFixe() {
+      const main = document.getElementsByTagName("main")[0];
+      if (main.classList.contains("scroll-y-mandatory")) clearInterval(interval);
+      else {
+        main.classList.add("scroll-y-mandatory");
+      }
+    }
+
+    window.addEventListener("load", snapFixe);
+
+    return () => {
+      window.removeEventListener("load", snapFixe);
+    };
   }, []);
 
   return (
-    <main className="projects"    tabIndex={-1}>
+    <main
+      className="projects"
+      tabIndex={-1}
+    >
       <h1 className="sr-only">{project?.title}</h1>
       {project && <ProjectIntro project={project} />}
 
       {project && (
         <MediaTile
           id="presentation-du-site"
-          media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: true }}
+          media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: false }}
           description="Série de gifs réalisée par régions afin de communiquer sur les évènements des différents territoires."
           softwares={["ae"]}
         />

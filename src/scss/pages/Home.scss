@@ -1,6 +1,9 @@
 .home {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
   .container-slide {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 
     width: 100%;
     min-width: 344px;

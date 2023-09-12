@@ -4,12 +4,9 @@
   height: 100vh;
 
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 
   transition: margin-left 0.3s ease-in-out;
-
-  scroll-behavior: smooth;
 
   .container-slide-intro {
     scroll-snap-align: start;

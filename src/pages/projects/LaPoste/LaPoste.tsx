@@ -14,11 +14,31 @@ export default function LaPoste() {
   useEffect(() => {
     const project = projects.filter((project) => project.id === id)[0];
     setProject(project);
+
+    // Chrome scroll-snap-align fixes :
+    const interval = setInterval(snapFixe);
+
+    function snapFixe() {
+      const main = document.getElementsByTagName("main")[0];
+      if (main.classList.contains("scroll-y-mandatory")) clearInterval(interval);
+      else {
+        main.classList.add("scroll-y-mandatory");
+      }
+    }
+
+    window.addEventListener("load", snapFixe);
+
+    return () => {
+      window.removeEventListener("load", snapFixe);
+    };
   }, []);
 
   return (
     project && (
-      <main className="projects"    tabIndex={-1}>
+      <main
+        className="projects"
+        tabIndex={-1}
+      >
         <h1 className="sr-only">{project?.title}</h1>
         <ProjectIntro project={project} />
 
