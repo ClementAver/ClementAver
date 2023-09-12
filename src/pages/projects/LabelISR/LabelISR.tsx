@@ -5,6 +5,7 @@ import ProjectIntro from "../../../components/ProjectIntro/ProjectIntro";
 import ProjectOutro from "../../../components/ProjectOutro/ProjectOutro";
 import MediaTile from "../../../components/tiles/MediaTile/MediaTile";
 import Slider from "../../../components/Slider/Slider";
+import NavRight from "../../../components/NavRight/NavRight";
 
 export default function LabelISR() {
   const [project, setProject] = useState<Project>();
@@ -39,10 +40,39 @@ export default function LabelISR() {
       tabIndex={-1}
     >
       <h1 className="sr-only">{project?.title}</h1>
+      <NavRight
+        sections={[
+          {
+            id: "intro",
+            name: "Présentation",
+          },
+          {
+            id: "voeux",
+            name: "Vœux 2022",
+          },
+          {
+            id: "gabarits-rs",
+            name: "Gabarits rs",
+          },
+          {
+            id: "gabarits-rs-anime",
+            name: "Gabarits rs animés",
+          },
+          {
+            id: "le-dico-vert",
+            name: "Le dico vert",
+          },
+          {
+            id: "outro",
+            name: "Bas de page",
+          },
+        ]}
+      />
+
       {project && <ProjectIntro project={project} />}
       {project && (
         <MediaTile
-          id="voeux-2022"
+          id="voeux"
           media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: false }}
           description="Vœux 2022 – Animation."
           softwares={["ae"]}

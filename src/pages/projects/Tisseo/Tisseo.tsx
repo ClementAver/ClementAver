@@ -5,6 +5,7 @@ import ProjectIntro from "../../../components/ProjectIntro/ProjectIntro";
 import ProjectOutro from "../../../components/ProjectOutro/ProjectOutro";
 import MediaTile from "../../../components/tiles/MediaTile/MediaTile";
 import Slider from "../../../components/Slider/Slider";
+import NavRight from "../../../components/NavRight/NavRight";
 
 export default function Tisseo() {
   const [project, setProject] = useState<Project>();
@@ -39,6 +40,31 @@ export default function Tisseo() {
       tabIndex={-1}
     >
       <h1 className="sr-only">{project?.title}</h1>
+      <NavRight
+        sections={[
+          {
+            id: "intro",
+            name: "Présentation",
+          },
+          {
+            id: "animation",
+            name: "Animation",
+          },
+          {
+            id: "details",
+            name: "Détails du bus",
+          },
+          {
+            id: "kawaii",
+            name: "N'est-il pas mignon ?",
+          },
+          {
+            id: "outro",
+            name: "Bas de page",
+          },
+        ]}
+      />
+
       {project && <ProjectIntro project={project} />}
 
       {project && (
@@ -51,7 +77,7 @@ export default function Tisseo() {
       )}
       {project && (
         <Slider
-          id="details-du-bus"
+          id="details"
           medias={[
             { className: "media-slider", src: `${project.medias[1].src}`, alt: `${project.medias[1].alt}` },
             { className: "media-slider", src: `${project.medias[2].src}`, alt: `${project.medias[2].alt}` },
@@ -63,7 +89,7 @@ export default function Tisseo() {
       )}
       {project && (
         <MediaTile
-          id="N'est-il pas mignon ?"
+          id="kawaii"
           media={{ className: "media", src: `${project.medias[4].src}`, alt: `${project.medias[4].alt}` }}
           noDescription
         />

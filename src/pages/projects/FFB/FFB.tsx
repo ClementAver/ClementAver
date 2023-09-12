@@ -5,6 +5,7 @@ import ProjectIntro from "../../../components/ProjectIntro/ProjectIntro";
 import ProjectOutro from "../../../components/ProjectOutro/ProjectOutro";
 import MediaTile from "../../../components/tiles/MediaTile/MediaTile";
 import Slider from "../../../components/Slider/Slider";
+import NavRight from "../../../components/NavRight/NavRight";
 
 export default function FFB() {
   const [project, setProject] = useState<Project>();
@@ -39,6 +40,35 @@ export default function FFB() {
       tabIndex={-1}
     >
       <h1 className="sr-only">{project?.title}</h1>
+      <NavRight
+        sections={[
+          {
+            id: "intro",
+            name: "Présentation",
+          },
+          {
+            id: "photo-d-ensemble",
+            name: "Photo d'ensemble",
+          },
+          {
+            id: "affiche",
+            name: "Affiche",
+          },
+          {
+            id: "details-de-l-affiche",
+            name: "Détails de l'affiche",
+          },
+          {
+            id: "depliant",
+            name: "Dépliant",
+          },
+          {
+            id: "outro",
+            name: "Bas de page",
+          },
+        ]}
+      />
+
       {project && <ProjectIntro project={project} />}
 
       {project && (
@@ -50,7 +80,7 @@ export default function FFB() {
       )}
       {project && (
         <MediaTile
-          id="Affiche"
+          id="affiche"
           media={{ className: "media", src: `${project.medias[1].src}`, alt: `${project.medias[1].alt}` }}
           description={"Affiche produite à l'occasion du tournoi de Béhourd de la Citadelle."}
           softwares={["in", "ai", "ps"]}
@@ -68,7 +98,7 @@ export default function FFB() {
       )}
       {project && (
         <Slider
-          id="details-de-l-affiche"
+          id="depliant"
           medias={[
             { className: "media-slider", src: `${project.medias[4].src}`, alt: `${project.medias[4].alt}` },
             { className: "media-slider", src: `${project.medias[5].src}`, alt: `${project.medias[5].alt}` },
