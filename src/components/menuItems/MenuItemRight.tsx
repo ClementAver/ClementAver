@@ -15,16 +15,21 @@ export default function MenuItem({ id, name, path, targetable }: MenuItem) {
       else setOnScreen(false);
     }
 
-    function hanldeIntersectionWithTimer() {
-      setTimeout(handleIntersection, 300);
+    function handleIntersectionKeydown() {
+      const interval = setInterval(handleIntersection);
+
+      function stopInterval() {
+        clearInterval(interval);
+      }
+      setTimeout(stopInterval, 300);
     }
-    hanldeIntersectionWithTimer();
+    handleIntersectionKeydown();
 
     main[0].addEventListener("scroll", handleIntersection);
-    document.addEventListener("keydown", hanldeIntersectionWithTimer);
+    document.addEventListener("keydown", handleIntersectionKeydown);
     return () => {
       main[0].removeEventListener("scroll", handleIntersection);
-      document.removeEventListener("keydown", hanldeIntersectionWithTimer);
+      document.removeEventListener("keydown", handleIntersectionKeydown);
     };
   }, [id]);
 
