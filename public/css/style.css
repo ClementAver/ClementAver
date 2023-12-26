@@ -688,6 +688,33 @@ main::-webkit-scrollbar {
   fill: #314766;
   margin-bottom: 5vh;
 }
+.about .tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.about .tech li {
+  display: flex;
+  height: fit-content;
+}
+.about .tech__picto {
+  width: 2rem;
+  max-width: 2rem;
+}
+.about .tech__picto--sass {
+  width: 2.25rem;
+  max-width: 2.25rem;
+}
+.about .tech__picto--php {
+  width: 3rem;
+  max-width: 3rem;
+}
+.about .tech__picto--mysql {
+  width: 3.2rem;
+  max-width: 3.2rem;
+}
 
 .projects {
   margin-right: 0;
@@ -1032,6 +1059,7 @@ main::-webkit-scrollbar {
 .nav-left li a {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 0.18rem;
   color: inherit;
   line-height: 20px;

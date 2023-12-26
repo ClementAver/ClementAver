@@ -1,6 +1,13 @@
+import Icon from "../../assets/vectors";
+
 export default function About() {
+  const IconBox = new Icon();
+
   return (
-    <main className="about" tabIndex={-1}>
+    <main
+      className="about"
+      tabIndex={-1}
+    >
       <section className="container-slide-intro">
         <img
           className="portrait"
@@ -11,7 +18,15 @@ export default function About() {
         <article className="container-flex-intro">
           <h1>À propos</h1>
 
-          <p>&laquo;&#8239;Diplômé en photographie puis en design graphique, je suis graphiste print/web & animateur depuis maintenant cinq ans. Mes motivations sont autant l'obtention du résultat juste que le pilotage du développement créatif. Impliqué&nbsp;et&nbsp;rigoureux, je place la communication et la réactivité au centre de toute collaboration.&#8239;&raquo;</p>
+          <p>
+            &laquo;&#8239;Après avoir travaillé six ans en tant que designer
+            graphique spécialisé dans le numérique, j'ai transitionné vers le
+            développement front-end en suivant une formation longue achevée en
+            décembre 2023. Avec ce bachelor en poche, je suis impatient de
+            rejoindre une équipe de développement web qui partage ma passion
+            pour les défis techniques, l'efficience et la maîtrise
+            visuelle.&#8239;&raquo;
+          </p>
           <br />
 
           <p className="scale">↓</p>
@@ -23,10 +38,22 @@ export default function About() {
           <article className="item-CV">
             <h2>Formation</h2>
 
+            <h3>oct. 2022 — déc. 2023</h3>
+
+            <p>
+              <span className="bold">
+                Développeur d'application - JavaScript&nbsp;React (RNCP 6)
+              </span>
+              <br />
+              Openclassrooms (à distance)
+            </p>
+
             <h3>2015 — 2017</h3>
 
             <p>
-              <span className="bold">BTS design graphique, communication &&nbsp;médias numériques</span>
+              <span className="bold">
+                BTS design graphique, communication &&nbsp;médias numériques
+              </span>
               <br />
               au Campus Fonderie de l’Image (Bagnolet, 93)
             </p>
@@ -41,7 +68,9 @@ export default function About() {
             <h3>2011— 2014</h3>
 
             <p>
-              <span className="bold">Baccalauréat Professionnel en photographie</span>
+              <span className="bold">
+                Baccalauréat Professionnel en photographie
+              </span>
               <br />
               au lycée professionnel Molière (Orthez, 64)
             </p>
@@ -53,17 +82,25 @@ export default function About() {
             <h3>2017 — 2022</h3>
 
             <p>
-              <span className="bold">Graphiste auto-entrepreneur (Paris, 75)</span>
+              <span className="bold">
+                Graphiste auto-entrepreneur (Paris, 75)
+              </span>
               <br />
-              Maquettage web/print, iconographie, photographie, motion design, habillage vidéo
+              Maquettage web/print, iconographie, photographie, motion design,
+              habillage vidéo
             </p>
 
             <h3>2015 — 2017</h3>
 
             <p>
-              <span className="bold">Apprentissage à l’Agence Fargo (Paris 2e)</span>
+              <span className="bold">
+                Apprentissage à l’Agence Fargo (Paris 2e)
+              </span>
               <br />
-              Travaux graphiques divers pratiqués en agence&#8239;: identités, maquettage print&#8239;/&#8239;web, cartes et rapports d’activité, bannières pub et réseaux sociaux. Packshots, retouches et portraits d’équipes.
+              Travaux graphiques divers pratiqués en agence&#8239;: identités,
+              maquettage print&#8239;/&#8239;web, cartes et rapports d’activité,
+              bannières pub et réseaux sociaux. Packshots, retouches et
+              portraits d’équipes.
             </p>
 
             <h3>2011— 2014</h3>
@@ -101,20 +138,32 @@ export default function About() {
             <p>
               <span className="bold">Suite Adobe</span>
               <br />
-              Maîtrise de Indesign, Illustrator, Photoshop, Lightroom ; niveau intermédiaire sur les logiciels After Effects et Première Pro.
+              Maîtrise de Indesign, Illustrator, Photoshop, Lightroom ; niveau
+              intermédiaire sur les logiciels After Effects et Première Pro.
             </p>
 
             <p>
-              <span className="bold">Photographie et traitement de l’image</span>
+              <span className="bold">
+                Photographie et traitement de l’image
+              </span>
               <br />
               Prise de vue studio & reportage, retouche, photomontage
             </p>
 
-            <h3>Langage</h3>
+            <h3>Technologies</h3>
 
-            <p>HTML – intermédiaire</p>
-            <p>CSS – intermédiaire</p>
-            <p>JavaScript – débutant</p>
+            <p className="bold">Quotidiennes</p>
+            <ul className="tech">
+              <li>{IconBox.typescript()}</li>
+              <li>{IconBox.sass()}</li>
+              <li>{IconBox.next()}</li>
+            </ul>
+
+            <p className="bold">Occasionnelles</p>
+            <ul className="tech">
+              <li>{IconBox.php()}</li>
+              <li>{IconBox.mysql()}</li>
+            </ul>
 
             <h3>Mobilité</h3>
 

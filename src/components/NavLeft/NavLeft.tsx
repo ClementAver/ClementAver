@@ -32,19 +32,35 @@ export default function NavLeft() {
       >
         <div
           className="sgmt-btn-nav-left"
-          style={display ? { transform: "rotate(45deg)" } : { transform: "rotate(0deg)" }}
+          style={
+            display
+              ? { transform: "rotate(45deg)" }
+              : { transform: "rotate(0deg)" }
+          }
         ></div>
         <div
           className="sgmt-btn-nav-left"
-          style={display ? { transform: "rotate(-45deg)" } : { transform: "rotate(0deg)" }}
+          style={
+            display
+              ? { transform: "rotate(-45deg)" }
+              : { transform: "rotate(0deg)" }
+          }
         ></div>
         <div
           className="sgmt-btn-nav-left"
-          style={display ? { transform: "translateY(-5px) scale(0)" } : { transform: "translateY(-5px) scale(1)" }}
+          style={
+            display
+              ? { transform: "translateY(-5px) scale(0)" }
+              : { transform: "translateY(-5px) scale(1)" }
+          }
         ></div>
         <div
           className="sgmt-btn-nav-left"
-          style={display ? { transform: "translateY(5px) scale(0)" } : { transform: "translateY(5px) scale(1)" }}
+          style={
+            display
+              ? { transform: "translateY(5px) scale(0)" }
+              : { transform: "translateY(5px) scale(1)" }
+          }
         ></div>
       </div>
       <nav
@@ -72,6 +88,22 @@ export default function NavLeft() {
             name="&Agrave; propos"
             path={location.pathname}
             icon={IconBox.aPropos()}
+          />
+          <MenuItem
+            targetable={!display ? -1 : 0}
+            key={"MenuItem-linkedin"}
+            id="https://www.linkedin.com/in/cl%C3%A9ment-aver-3aa9771b4/"
+            name="LinkedIn"
+            path={location.pathname}
+            icon={IconBox.linkedin()}
+          />
+          <MenuItem
+            targetable={!display ? -1 : 0}
+            key={"MenuItem-github"}
+            id="https://github.com/ClementAver"
+            name="Github"
+            path={location.pathname}
+            icon={IconBox.github()}
           />
           <MenuItem
             targetable={!display ? -1 : 0}

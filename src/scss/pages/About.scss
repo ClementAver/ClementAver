@@ -118,4 +118,38 @@
     fill: $colorOne;
     margin-bottom: 5vh;
   }
+
+
+  .tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+
+  li {
+    display: flex;
+height: fit-content;
+  }
+
+    &__picto {
+      width: 2rem;
+      max-width: 2rem;
+      }
+
+      &__picto--sass {
+        width: 2.25rem;
+        max-width: 2.25rem;
+      }
+
+      &__picto--php {
+        width: 3rem;
+        max-width: 3rem;
+      }
+
+      &__picto--mysql {
+        width: 3.2rem;
+        max-width: 3.2rem;
+      }
+  }
 }
