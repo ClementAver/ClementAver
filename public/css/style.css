@@ -429,6 +429,15 @@ span {
   padding: 1px 10px;
 }
 
+.Gh {
+  font-weight: 500;
+  color: #fff;
+  background: #0d1117;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
 .F {
   font-weight: 500;
   background: -webkit-linear-gradient(left, #f34e1e, #ff7261, #a259ff, #1abcfd, #0ace82);
@@ -535,6 +544,33 @@ main::-webkit-scrollbar {
   .home .container-slide {
     scroll-snap-align: none;
   }
+}
+.home .intro {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  max-width: 600px;
+}
+.home .intro h1 {
+  text-align: center;
+}
+.home .intro p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.home .intro p:nth-of-type(2) {
+  margin-bottom: 0.2rem;
+}
+.home .intro span {
+  display: inline;
+}
+.home .intro svg {
+  width: 100%;
+  fill: #314766;
+  box-sizing: border-box;
+  margin-right: 0;
+  width: 1rem;
 }
 .home .container-projet {
   max-width: 100%;

@@ -21,11 +21,11 @@ export default class Icon {
     );
   }
 
-  github() {
+  github(className?: string) {
     return (
       <svg
         viewBox="0 0 98 96"
-        className="left-nav-picto"
+        className={className}
       >
         <path
           fillRule="evenodd"

@@ -14,6 +14,9 @@ export default function SoftwareFactory({ software }: { software: string }) {
     case "ai":
       soft = <span className="Ai">Illustrator</span>;
       break;
+    case "gh":
+      soft = <span className="Gh">Github</span>;
+      break;
     case "fi":
       soft = (
         <span className="F-bg">

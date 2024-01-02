@@ -310,9 +310,26 @@ span {
   padding: 1px 10px;
 }
 
+.Gh {
+  font-weight: 500;
+  color: #fff;
+  background: #0d1117;
+
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
 .F {
   font-weight: 500;
-  background: -webkit-linear-gradient(left, #f34e1e, #ff7261, #a259ff, #1abcfd, #0ace82);
+  background: -webkit-linear-gradient(
+    left,
+    #f34e1e,
+    #ff7261,
+    #a259ff,
+    #1abcfd,
+    #0ace82
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

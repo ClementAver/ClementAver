@@ -103,7 +103,7 @@ export default function NavLeft() {
             id="https://github.com/ClementAver"
             name="Github"
             path={location.pathname}
-            icon={IconBox.github()}
+            icon={IconBox.github("left-nav-picto")}
           />
           <MenuItem
             targetable={!display ? -1 : 0}
