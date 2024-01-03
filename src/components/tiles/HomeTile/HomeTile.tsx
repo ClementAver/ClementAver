@@ -4,7 +4,12 @@ import type { Project } from "../../../types";
 import MediaFactory from "../../../factories/MediaFactory";
 import main from "../../../scss/globals/main.module.scss";
 
-export default function HomeTile({ project }: { key: string; project: Project }) {
+export default function HomeTile({
+  project,
+}: {
+  key: string;
+  project: Project;
+}) {
   const { id, title, tags, work, summary, cover } = project;
 
   const description = useRef<HTMLDivElement>(null);
@@ -25,15 +30,19 @@ export default function HomeTile({ project }: { key: string; project: Project })
 
     const resizeObserver = new ResizeObserver((entries) => {
       entries.forEach((entry) => {
-        if (link.current && entry.target.clientHeight < 483) {
-          entry.target.setAttribute("style", `background-color: ${colorOne}; color: ${colorTwo}`);
+        if (link.current && entry.target.clientHeight < 351) {
+          //483
+          entry.target.setAttribute(
+            "style",
+            `background-color: ${colorOne}; color: ${colorTwo}`
+          );
 
           link.current.style.borderBottom = `1px solid ${colorTwo}`;
 
           link.current.addEventListener("mouseover", onMouseOver);
           link.current.addEventListener("mousedown", onMouseDown);
           link.current.addEventListener("mouseout", onMouseOut);
-        } else if (link.current && entry.target.clientHeight >= 483) {
+        } else if (link.current && entry.target.clientHeight >= 351) {
           entry.target.setAttribute("style", `color: ${colorOne}`);
 
           link.current.style.borderBottom = "";

@@ -737,19 +737,19 @@ main::-webkit-scrollbar {
 }
 .about .tech__picto {
   width: 2rem;
-  max-width: 2rem;
+  max-width: 1.5rem;
 }
 .about .tech__picto--sass {
-  width: 2.25rem;
-  max-width: 2.25rem;
+  width: 1.75rem;
+  max-width: 1.75rem;
 }
 .about .tech__picto--php {
-  width: 3rem;
-  max-width: 3rem;
+  width: 2.5rem;
+  max-width: 2.5rem;
 }
 .about .tech__picto--mysql {
-  width: 3.2rem;
-  max-width: 3.2rem;
+  width: 2.7rem;
+  max-width: 2.7rem;
 }
 
 .projects {

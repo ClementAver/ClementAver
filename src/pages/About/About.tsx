@@ -154,9 +154,9 @@ export default function About() {
 
             <p className="bold">Quotidiennes</p>
             <ul className="tech">
+              <li>{IconBox.next()}</li>
               <li>{IconBox.typescript()}</li>
               <li>{IconBox.sass()}</li>
-              <li>{IconBox.next()}</li>
             </ul>
 
             <p className="bold">Occasionnelles</p>
