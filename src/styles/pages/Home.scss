@@ -1,0 +1,136 @@
+.home {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  .container-slide {
+    scroll-snap-align: start;
+
+    width: 100%;
+    min-width: 344px;
+
+    min-height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    padding: 22px;
+
+    overflow-x: hidden;
+
+    @media screen and (max-height: 950px) {
+      scroll-snap-align: none;
+    }
+  }
+
+  .intro {
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
+    max-width: 600px;
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 1rem;
+
+      &:nth-of-type(2) {
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    span {
+      display: inline;
+    }
+
+    svg {
+      width: 100%;
+      fill: $colorOne;
+      box-sizing: border-box;
+      margin-right: 0;
+      width: 1rem;
+    }
+  }
+
+  .container-projet {
+    max-width: 100%;
+    max-height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 650px));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 50vh));
+
+    @media screen and (max-width: 768px) {
+      grid-template-rows: repeat(auto-fit, minmax(300px, 480px));
+    }
+
+    justify-content: center;
+    column-gap: 22px;
+
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .preview {
+    width: 100%;
+    max-width: 1322px;
+
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 650px;
+
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    padding: 22px 35px 35px 22px;
+    color: $colorOne;
+
+    h2 {
+      color: inherit;
+    }
+
+    p {
+      color: inherit;
+    }
+
+    span {
+      color: inherit;
+    }
+
+    button {
+      margin-top: 0.5rem;
+      color: inherit;
+
+      a {
+        color: inherit;
+        transition: border-bottom 0.3s ease-in-out,
+          background-color 0.3s ease-in-out;
+      }
+    }
+
+    .truncate {
+      box-sizing: border-box;
+      overflow: hidden;
+      line-height: 1.2;
+      max-height: calc(1.2rem * 4);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+// the main markup will be resized when the menu is deployed.
+.nav-left.deployed + main {
+  @media (min-width: 768px) {
+    margin-left: 240px;
+  }
+}
+
+/* button -s */
+
+#nav-left-btn {
+  border: none;
+
+  position: fixed;
+  top: 22px;
+  right: 22px;
+
+  z-index: 110;
+
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.3s ease-in-out;
+  background-color: $colorTwo;
+  display: flex;
+
+  align-items: center;
+
+  &:hover {
+    background-color: $colorFour;
+
+    .sgmt-btn-nav-left {
+      border-top: 0.15rem solid $colorTwo;
+    }
+  }
+
+  .sgmt-btn-nav-left {
+    border-top: 0.15rem solid $colorOne;
+    position: absolute;
+
+    width: 18px;
+    margin-left: 6px;
+
+    transition: transform 0.3s ease-in-out, border-top 0.3s ease-in-out;
+  }
+}
+/* button -e */
+
+/* menu -s */
+.nav-left {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: $colorOne;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 22px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  transition: transform 0.3s ease-in-out;
+  transform: translate(-240px);
+
+  &.deployed {
+    transform: translate(0px);
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+  }
+
+  li {
+    border-radius: 0.5rem;
+    color: $colorTwo;
+    fill: $colorTwo;
+
+    cursor: pointer;
+    user-select: none;
+
+    margin-left: 11px;
+    margin-right: 11px;
+
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $colorFour;
+    }
+
+    &:active {
+      background-color: $colorSix;
+    }
+
+    a {
+      display: flex;
+      flex-flow: row nowrap;
+
+      align-items: center;
+      gap: 0.18rem;
+      color: inherit;
+      line-height: 20px;
+      padding: 11px 0;
+      padding-left: 11px;
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, font-weight 0.3s ease-in-out, fill 0.3s ease-in-out;
+    }
+
+    &:hover a {
+      transform: translateX(6px);
+      font-weight: 500;
+    }
+
+    a.page-active {
+      color: $colorFour;
+      fill: $colorFour;
+      font-weight: 600;
+    }
+
+    a.page-active:hover {
+      fill: $colorOne;
+      color: $colorOne;
+    }
+  }
+}
+
+#container-logo {
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+  gap: 11px;
+
+  width: 218px;
+  padding: 6px 6px 6px 11px;
+
+  transition: fill 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transform: translateX(11px);
+
+  border-radius: 0.5rem;
+  fill: $colorOne;
+
+  &:hover {
+    background-color: $colorFour;
+    fill: $colorFour;
+  }
+}
+
+#picto-logo {
+  width: 70px;
+  fill: inherit;
+  background-color: $colorTwo;
+  border-radius: 50%;
+}
+
+#text-logo {
+  line-height: 1.7rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  color: $colorTwo;
+}
+
+.left-nav-picto {
+  max-width: 1.5rem;
+  fill: inherit;
+  align-self: center;
+  margin-right: 0.42rem;
+}
+/* menu -e */

@@ -1,0 +1,67 @@
+/*----------| nav-right |----------*/
+/* nav-right -s*/
+.container-nav-right {
+  margin-right: -240px;
+  @media screen and (min-width: 1846px) {
+    margin-right: 0;
+  }
+
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 100vh;
+
+  transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 11px;
+
+  border-left: 1px solid $colorOneOpaciteCinquante;
+  overflow-y: scroll;
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    margin: auto 0;
+  }
+
+  li {
+    border-radius: 0.5rem;
+    color: $colorOne;
+
+    margin-left: 6px;
+    margin-right: 22px;
+
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover a {
+      transform: translateX(6px);
+    }
+
+    &:active {
+      background-color: $colorSix;
+      color: $colorTwo;
+    }
+
+    a {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 11px;
+
+      color: inherit;
+      line-height: 20px;
+      padding: 11px 0;
+      padding-left: 11px;
+      transition: transform 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+    }
+  }
+
+  .on-screen {
+    font-weight: 500;
+  }
+}
+/* nav-right -e*/

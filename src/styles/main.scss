@@ -1,0 +1,423 @@
+/* main color */
+$colorOne: #314766;
+/* main color 50% */
+$colorOneOpaciteCinquante: rgba(49, 71, 102, 0.5);
+/* secondary color */
+$colorTwo: #f0f0f0;
+/* hover on bright */
+$colorThree: #c7ced8;
+/* hover on dark */
+$colorFour: #677b99;
+/* active on bright */
+$colorFive: #b2bccc;
+/* active on dark */
+$colorSix: #8b9aae;
+
+@import "./globals/fonts.scss";
+@import "./globals/animations.scss";
+
+/*| reset -start |*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "GeneralSans-Variable", sans-serif;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+  list-style-type: none;
+}
+/*| reset -end |*/
+
+/*----------| Global |----------*/
+
+:root {
+  font-size: 16px;
+  font-family: "GeneralSans-Variable";
+}
+
+html {
+  overflow: hidden;
+  background: $colorTwo;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: grid;
+
+  overflow-y: scroll;
+
+  color: $colorTwo;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+main {
+  height: 100vh;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  transition: margin-left 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: $colorOne;
+  transition: background-color 0.3s ease-in-out;
+}
+
+abbr {
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+
+  width: fit-content;
+  height: fit-content;
+}
+
+button a {
+  display: block;
+
+  padding: 0.7rem;
+  border-bottom: 1px solid $colorOne;
+}
+
+button a:hover {
+  background-color: $colorThree;
+}
+
+button a:active {
+  background-color: $colorFive;
+}
+
+h1 {
+  font-size: 4rem;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 1.5rem;
+  color: $colorOne;
+  line-height: 4.8rem;
+}
+
+.main-title {
+  font-size: 4rem;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 1.5rem;
+  color: $colorOne;
+  line-height: 4.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: $colorOne;
+}
+
+p + h2 {
+  margin-top: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: $colorOne;
+}
+
+p + h3 {
+  margin-top: 0.5rem;
+}
+
+p {
+  color: $colorOne;
+}
+
+article p {
+  margin-bottom: 0.5rem;
+}
+
+span {
+  color: $colorOne;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.rubriquage {
+  margin-bottom: 0.5rem;
+  span {
+    font-weight: 500;
+  }
+}
+
+.scale {
+  font-size: 2rem;
+}
+
+/* softwares -s */
+.softwares {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 12px;
+}
+
+.Ae {
+  font-weight: 500;
+  color: #9d98ff;
+  background: #00005a;
+
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.Ps {
+  font-weight: 500;
+  color: #37a3f1;
+  background: #001e36;
+
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.In {
+  font-weight: 500;
+  color: #fa3567;
+  background: #490220;
+
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.Ai {
+  font-weight: 500;
+  color: #ee910e;
+  background: #320000;
+
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.Gh {
+  font-weight: 500;
+  color: #fff;
+  background: #0d1117;
+
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+
+.F {
+  font-weight: 500;
+  background: -webkit-linear-gradient(
+    left,
+    #f34e1e,
+    #ff7261,
+    #a259ff,
+    #1abcfd,
+    #0ace82
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.F-bg {
+  background: white;
+
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+}
+/* softwares -e */
+
+/*----------| scrollbar |----------*/
+
+/*scrollbar -s*/
+::-webkit-scrollbar {
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: $colorTwo;
+}
+::-webkit-scrollbar-thumb {
+  background: $colorThree;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#container-nav-left::-webkit-scrollbar {
+  display: none;
+}
+
+#container-nav-right::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: $colorOne;
+}
+
+#left-nav-bg::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar {
+  width: 6px;
+  display: block;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+/*scrollbar -e*/
+
+/*utils -s*/
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.f-h {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.scroll-y-mandatory {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+/*utils -e*/
+
+@import "./pages/Home.scss";
+@import "./pages/About.scss";
+@import "./pages/projects.scss";
+@import "./components/NavLeft.scss";
+@import "./components/NavRight.scss";
