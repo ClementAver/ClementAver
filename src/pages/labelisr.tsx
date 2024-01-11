@@ -92,8 +92,8 @@ export default function LabelISR() {
             { className: "media-slider", src: `${project.medias[7].src}`, alt: `${project.medias[7].alt}` },
             { className: "media-slider", src: `${project.medias[8].src}`, alt: `${project.medias[8].alt}` },
           ]}
-          description="Conception des maquettes sur figma permettant une présentation dynamique au client."
-          softwares={["fi", "ai"]}
+         description="Gabarits de visuels à destination des réseaux sociaux du Label ISR."
+          softwares={["in", "ps"]}
         />
       )}
 
@@ -105,8 +105,8 @@ export default function LabelISR() {
             { className: "media-slider", src: `${project.medias[10].src}`, alt: `${project.medias[10].alt}` },
             { className: "media-slider", src: `${project.medias[11].src}`, alt: `${project.medias[11].alt}` },
           ]}
-          description="Variantes des gabarits animés."
-          softwares={["in", "ps"]}
+          description="Variantes des gabarits RS animés."
+          softwares={["ae"]}
         />
       )}
 
@@ -114,7 +114,7 @@ export default function LabelISR() {
         <MediaTile
           id="le-dico-vert"
           media={{ className: "media", type: "video/mp4", src: `${project.medias[12].src}`, poster: `${project.medias[12].poster}`, alt: `${project.medias[12].alt}`, controls: true, muted: false }}
-          description="Série d'animations définissant les termes techniques du l'investissement ESG."
+          description="Série d’animations définissant les termes techniques du l’investissement ESG."
           softwares={["ae"]}
         />
       )}

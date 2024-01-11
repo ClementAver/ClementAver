@@ -20,7 +20,8 @@ export default function LaNuitDuDroit() {
 
     function snapFixe() {
       const main = document.getElementsByTagName("main")[0];
-      if (main.classList.contains("scroll-y-mandatory")) clearInterval(interval);
+      if (main.classList.contains("scroll-y-mandatory"))
+        clearInterval(interval);
       else {
         main.classList.add("scroll-y-mandatory");
       }
@@ -69,15 +70,27 @@ export default function LaNuitDuDroit() {
       {project && (
         <MediaTile
           id="animation"
-          media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: false }}
-          description="Série de gifs réalisée par régions afin de communiquer sur les évènements des différents territoires."
+          media={{
+            className: "media",
+            type: "video/mp4",
+            src: `${project.medias[0].src}`,
+            poster: `${project.medias[0].poster}`,
+            alt: `${project.medias[0].alt}`,
+            controls: true,
+            muted: false,
+          }}
+          description="Vidéo de Présentation de l’évènement."
           softwares={["ae"]}
         />
       )}
       {project && (
         <MediaTile
           id="gif-region"
-          media={{ className: "media", src: `${project.medias[1].src}`, alt: `${project.medias[1].alt}` }}
+          media={{
+            className: "media",
+            src: `${project.medias[1].src}`,
+            alt: `${project.medias[1].alt}`,
+          }}
           description="Série de gifs réalisée par régions afin de communiquer sur les évènements des différents territoires."
           softwares={["fi", "ps"]}
         />
@@ -85,7 +98,11 @@ export default function LaNuitDuDroit() {
       {project && (
         <MediaTile
           id="gif-evenement"
-          media={{ className: "media", src: `${project.medias[2].src}`, alt: `${project.medias[2].alt}` }}
+          media={{
+            className: "media",
+            src: `${project.medias[2].src}`,
+            alt: `${project.medias[2].alt}`,
+          }}
           description="Série de gifs réalisée pour promouvoir les principaux évènements de La Nuit du Droit."
           softwares={["fi", "ps"]}
         />

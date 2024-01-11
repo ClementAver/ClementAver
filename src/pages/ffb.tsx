@@ -92,7 +92,7 @@ export default function FFB() {
             alt: `${project.medias[1].alt}`,
           }}
           description={
-            "Affiche produite à l'occasion du tournoi de Béhourd de la Citadelle."
+            "Affiche produite à l’occasion du tournoi de Béhourd de la Citadelle."
           }
           softwares={["in", "ai", "ps"]}
         />

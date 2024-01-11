@@ -63,7 +63,7 @@ const projects = [
     title: "La Nuit du Droit",
     tags: ["Animation", "Réseaux sociaux"],
     date: "2021",
-    work: "Déploiement de l'identité afin de promouvoir l'évènement sur les réseaux sociaux",
+    work: "Déploiement de l’identité afin de promouvoir l’évènement sur les réseaux sociaux",
     summary:
       "La Nuit du Droit, par les manifestations les plus diverses, a pour objectif de mieux faire connaître le droit, ses principes, ses institutions, ses métiers.",
     cover: {
@@ -77,7 +77,7 @@ const projects = [
         src: "LNDD-Vidéo-2021-16x9.mp4",
         type: "video/mp4",
         poster: "LNDD-Vidéo-2021-16x9-poster.png",
-        alt: "Vidéo de Présentation de l'évènement.",
+        alt: "Vidéo de Présentation de l’évènement.",
       },
       {
         src: "bretagne-1080x1080.gif",
@@ -85,7 +85,7 @@ const projects = [
       },
       {
         src: "évènement-1080x1080.gif",
-        alt: "gif présentant l'évènement LNDD du Conseil constitutionnel.",
+        alt: "gif présentant l’évènement LNDD du Conseil constitutionnel.",
       },
     ],
   },
@@ -116,40 +116,40 @@ const projects = [
         src: "La-Marseillaise.mp4",
         type: "video/mp4",
         poster: "La-Marseillaise-poster.png",
-        alt: "Vidéo de trente-sept secondes présentant l'asset.",
+        alt: "Vidéo de trente-sept secondes présentant l’asset.",
       },
       {
         src: "perialDansLeRetro-1.png",
-        alt: "Première image du carrousel « #DansLeRétro », présentant l'asset.",
+        alt: "Première image du carrousel « #DansLeRétro », présentant l’asset.",
       },
       {
         src: "perialDansLeRetro-2.png",
-        alt: "Seconde image du carrousel « #DansLeRétro », présentant des chiffres clés de l'asset.",
+        alt: "Seconde image du carrousel « #DansLeRétro », présentant des chiffres clés de l’asset.",
       },
       {
         src: "perialDansLeRetro-3.png",
-        alt: "Troisième image du carrousel « #DansLeRétro », décrivant l'asset.",
+        alt: "Troisième image du carrousel « #DansLeRétro », décrivant l’asset.",
       },
       {
         src: "perialDansLeRetro-4.png",
-        alt: "Quatrième image du carrousel « #DansLeRétro », présentant une citation du gérant de l'asset.",
+        alt: "Quatrième image du carrousel « #DansLeRétro », présentant une citation du gérant de l’asset.",
       },
 
       {
         src: "perialAcquisitionDuTrimestre-1.png",
-        alt: "Première image du carrousel « L'aquisition du trimestre », présentant l'asset.",
+        alt: "Première image du carrousel « L’aquisition du trimestre », présentant l’asset.",
       },
       {
         src: "perialAcquisitionDuTrimestre-2.png",
-        alt: "Seconde image du carrousel « L'aquisition du trimestre », présentant un graphique de la répartition sectorielle de l'asset.",
+        alt: "Seconde image du carrousel « L’aquisition du trimestre », présentant un graphique de la répartition sectorielle de l’asset.",
       },
       {
         src: "perialAcquisitionDuTrimestre-3.png",
-        alt: "Troisième image du carrousel « L'aquisition du trimestre », présentant un graphique de la répartition géographique de l'asset.",
+        alt: "Troisième image du carrousel « L’aquisition du trimestre », présentant un graphique de la répartition géographique de l’asset.",
       },
       {
         src: "perialAcquisitionDuTrimestre-4.png",
-        alt: "Quatrième image du carrousel « L'aquisition du trimestre », présentant un graphique du taux d'occupation financier de l'asset.",
+        alt: "Quatrième image du carrousel « L’aquisition du trimestre », présentant un graphique du taux d’occupation financier de l’asset.",
       },
     ],
   },
@@ -174,7 +174,7 @@ const projects = [
         src: "labelIsrVoeux2022.mp4",
         type: "video/mp4",
         poster: "labelIsrVoeux2022-poster.png",
-        alt: "Animation de trente secondes mettant en mouvement le décors des illustrations du Label ISR pour habiller cinq panneaux d'informations rétrospectives.",
+        alt: "Animation de trente secondes mettant en mouvement le décors des illustrations du Label ISR pour habiller cinq panneaux d’informations rétrospectives.",
       },
       {
         src: "labelIsr2.png",
@@ -224,7 +224,7 @@ const projects = [
         src: "Lexique-ISR.mp4",
         type: "video/mp4",
         poster: "Lexique-ISR-poster.png",
-        alt: "Animation « Le Dico Vert » pour l'acronyme « ISR ».",
+        alt: "Animation « Le Dico Vert » pour l’acronyme « ISR ».",
       },
     ],
   },
@@ -250,7 +250,7 @@ const projects = [
     medias: [
       {
         src: "FFB6.png",
-        alt: "Photo comprenant l'affiche et le dépliant.",
+        alt: "Photo comprenant l’affiche et le dépliant.",
       },
       {
         src: "FFB-affiche.png",
@@ -258,19 +258,19 @@ const projects = [
       },
       {
         src: "FFB4.png",
-        alt: "Focus sur le titre de l'affiche.",
+        alt: "Focus sur le titre de l’affiche.",
       },
       {
         src: "FFB5.png",
-        alt: "Focus sur l'illustration de l'affiche. Photographie tramée de deux combattants.",
+        alt: "Focus sur l’illustration de l’affiche. Photographie tramée de deux combattants.",
       },
       {
         src: "FFB11.png",
-        alt: "Photographie de la couverture du dépliant. Logo centrer dans le tier supérieur, photographie tramée d'un combattant sur les deux tiers inférieurs.",
+        alt: "Photographie de la couverture du dépliant. Logo centrer dans le tier supérieur, photographie tramée d’un combattant sur les deux tiers inférieurs.",
       },
       {
         src: "FFB3.png",
-        alt: "Photographie d'un détail du dépliant posé sur l'affiche.",
+        alt: "Photographie d’un détail du dépliant posé sur l’affiche.",
       },
       {
         src: "FFB10.png",
@@ -289,7 +289,7 @@ const projects = [
     title: "Tisséo voyageurs",
     tags: ["Animation fictive"],
     date: "2021",
-    work: "Proposition d'une animation à destination des écrans de la flotte urbaine de Tisséo afin de promouvoir l'application 'Tisséo métro tram bus Toulouse.'",
+    work: "Proposition d’une animation à destination des écrans de la flotte urbaine de Tisséo afin de promouvoir l’application « Tisséo métro tram bus Toulouse ».",
     summary:
       "Tisséo est la marque commerciale du réseau de transports en commun de Toulouse et sa région.",
     cover: {
@@ -315,7 +315,7 @@ const projects = [
       },
       {
         src: "projet-after.png",
-        alt: "Capture d'écran du projet After Effects.",
+        alt: "Capture d’écran du projet After Effects.",
       },
       {
         src: "bus.gif",
@@ -330,7 +330,7 @@ const projects = [
     title: "La Poste",
     tags: ["Animation fictive"],
     date: "2021",
-    work: "Proposition d'une série d'animations à destination des réseaux sociaux, afin de sensibiliser aux différents processus de La Poste.",
+    work: "Proposition d’une série d’animations à destination des réseaux sociaux, afin de sensibiliser aux différents processus de La Poste.",
     summary: "",
     cover: {
       src: "La-Poste-Home.mp4",
@@ -343,15 +343,15 @@ const projects = [
         src: "uneLettreALaPoste.mp4",
         type: "video/mp4",
         poster: "uneLettreALaPoste-poster.jpg",
-        alt: "Animation livrable. Animation de visuels illustrant les textes au-dessous. Textes décrivant les différentes étapes du trajet d'une lettre.",
+        alt: "Animation livrable. Animation de visuels illustrant les textes au-dessous. Textes décrivant les différentes étapes du trajet d’une lettre.",
       },
       {
         src: "traceBoitePostale.png",
-        alt: "Montage tracé/rendu final de l'illustration d'une boîte postale.",
+        alt: "Montage tracé/rendu final de l’illustration d’une boîte postale.",
       },
       {
         src: "traceCentreTri.png",
-        alt: "Montage tracé/rendu final de l'illustration d'un chariot de tri.",
+        alt: "Montage tracé/rendu final de l’illustration d’un chariot de tri.",
       },
       {
         src: "détails-animation.mp4",

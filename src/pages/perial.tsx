@@ -71,7 +71,7 @@ export default function Perial() {
         <MediaTile
           id="beeotels"
           media={{ className: "media", type: "video/mp4", src: `${project.medias[0].src}`, poster: `${project.medias[0].poster}`, alt: `${project.medias[0].alt}`, controls: true, muted: false }}
-          description="Animation réalisée pour promouvoir l'installation de ruches en partenariat avec la société Beeodiversity sur plusieurs sites gérés par la SCPI PFO₂."
+          description="Animation réalisée pour promouvoir l’installation de ruches en partenariat avec la société Beeodiversity sur plusieurs sites gérés par la SCPI PFO₂."
           softwares={["ae"]}
         />
       )}
@@ -79,7 +79,7 @@ export default function Perial() {
         <MediaTile
           id="la-marseillaise"
           media={{ className: "media", type: "video/mp4", src: `${project.medias[1].src}`, poster: `${project.medias[1].poster}`, alt: `${project.medias[1].alt}`, controls: true, muted: true }}
-          description="Animation réalisée pour annoncer l'acquisition de la tour « La Marseillaise » pour le compte de fonds gérés par PERIAL AM."
+          description="Animation réalisée pour annoncer l’acquisition de la tour « La Marseillaise » pour le compte de fonds gérés par PERIAL AM."
           softwares={["ae"]}
         />
       )}
@@ -92,7 +92,7 @@ export default function Perial() {
             { className: "media-slider", src: `${project.medias[4].src}`, alt: `${project.medias[4].alt}` },
             { className: "media-slider", src: `${project.medias[5].src}`, alt: `${project.medias[5].alt}` },
           ]}
-          description="Carrousel réalisé pour les réseaux sociaux de Perial AM afin de mettre l'accent sur une acquisition marquante de l'année passée."
+          description="Carrousel réalisé pour les réseaux sociaux de Perial AM afin de mettre l’accent sur une acquisition marquante de l’année passée."
           softwares={["in"]}
         />
       )}

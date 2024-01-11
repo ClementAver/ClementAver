@@ -63,8 +63,13 @@ export default function ProjectIntro({ project }: { project: Project }) {
         </span>
 
         <p>{work}</p>
-        <p>•</p>
-        <p>{summary}</p>
+        {summary && (
+          <>
+            <p>•</p>
+            <p>{summary}</p>
+          </>
+        )}
+
         <br />
 
         <p className="scale">↓</p>

@@ -96,7 +96,7 @@ export default function GalerieRobillard() {
             { className: "media-slider", src: `${project.medias[6].src}`, alt: `${project.medias[6].alt}` },
             { className: "media-slider", src: `${project.medias[7].src}`, alt: `${project.medias[7].alt}` },
           ]}
-          description="Conception des maquettes sur figma permettant une présentation dynamique au client."
+          description="Détails des maquettes"
           noDescription
           softwares={["fi", "ae"]}
         />
