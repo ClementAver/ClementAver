@@ -7,11 +7,13 @@ export default function NavbarItemL({
   path,
   icon,
   targetable,
+  target,
 }: MenuItem) {
   return (
     <li>
       <Link
         tabIndex={targetable}
+        {...(target && { target: "_blank" })}
         href={id}
         className={path === `/${id}` ? "page-active" : ""}
         aria-label={`Naviguer vers la page : ${name}.`}

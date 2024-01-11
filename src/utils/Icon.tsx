@@ -2,6 +2,8 @@ export default class Icon {
   aPropos(className?: string) {
     return (
       <svg
+        width="1.5rem"
+        height="1.5rem"
         viewBox="0 0 26.5 22.41"
         className={className}
       >
@@ -13,6 +15,8 @@ export default class Icon {
   contact(className?: string) {
     return (
       <svg
+        width="1.5rem"
+        height="1.5rem"
         viewBox="0 0 153.11 118.71"
         className={className}
       >
@@ -24,6 +28,8 @@ export default class Icon {
   github(className?: string) {
     return (
       <svg
+        width="1.5rem"
+        height="1.5rem"
         viewBox="0 0 98 96"
         className={className}
       >
@@ -39,6 +45,8 @@ export default class Icon {
   linkedin(className?: string) {
     return (
       <svg
+        width="1.5rem"
+        height="1.5rem"
         viewBox="0 0 448 512"
         className={className}
       >

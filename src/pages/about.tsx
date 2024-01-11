@@ -15,7 +15,7 @@ export default function About() {
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Clément_Aver_CV.txt";
+    link.download = "Clément_Aver_CV.pdf";
     link.click();
   };
 
@@ -167,6 +167,17 @@ export default function About() {
             <article className="item-CV">
               <h2>Compétences</h2>
 
+              <h3>Technologies</h3>
+
+              <p>
+                Ma formation portait sur React. Je l’ai enrichie avec
+                TypeScript, Next, et Vitest entre autres.
+              </p>
+              <p>
+                À titre personnel, je me suis également penché sur PHP et MySQL
+                à l’aide de MAMP et suis ouvert à ces outils.
+              </p>
+
               <h3>Logiciels</h3>
 
               <p>
@@ -182,17 +193,6 @@ export default function About() {
                 </span>
                 <br />
                 Prise de vue studio & reportage, retouche, photomontage
-              </p>
-
-              <h3>Technologies</h3>
-
-              <p>
-                Ma formation portait sur React. Je l’ai enrichi avec TypeScript,
-                Next, et Vitest entre autres.
-              </p>
-              <p>
-                À titre personnel, je me suis également penché sur PHP et MySQL
-                à l’aide de MAMP et suis ouvert à ces outils.
               </p>
 
               {/* <p className="bold">Quotidiennes</p>

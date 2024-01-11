@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import Navbar from "../NavLeft/NavLeft";
+import NavLeft from "../NavLeft/NavLeft";
 import ScrollToAnchor from "@/utils/ScrollToAnchor";
 
 export default function MainLayout({
@@ -10,7 +10,7 @@ export default function MainLayout({
   return (
     <>
       <ScrollToAnchor />
-      <Navbar />
+      <NavLeft displayed={true} />
       {children}
     </>
   );

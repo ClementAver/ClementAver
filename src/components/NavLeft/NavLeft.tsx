@@ -6,10 +6,10 @@ import type { Project } from "../../types";
 import Icon from "@/utils/Icon";
 import NavbarItemL from "../navbarItems/NavbarItemL";
 
-export default function NavLeft() {
+export default function NavLeft({ displayed }: { displayed: boolean }) {
   const router = useRouter();
   const IconBox = new Icon();
-  const [display, setDisplay] = useState(false);
+  const [display, setDisplay] = useState(displayed);
 
   const navLeft = useRef<HTMLElement>(null);
 
@@ -65,7 +65,7 @@ export default function NavLeft() {
       </div>
       <nav
         ref={navLeft}
-        className="nav-left"
+        className="nav-left deployed"
       >
         <div style={{ marginTop: "auto", paddingTop: "0.5rem" }}></div>
         <LogoCard targetable={!display ? -1 : 0} />
@@ -96,6 +96,7 @@ export default function NavLeft() {
             name="LinkedIn"
             path={router.pathname}
             icon={IconBox.linkedin("left-nav-picto")}
+            target
           />
           <NavbarItemL
             targetable={!display ? -1 : 0}
@@ -104,6 +105,7 @@ export default function NavLeft() {
             name="Github"
             path={router.pathname}
             icon={IconBox.github("left-nav-picto")}
+            target
           />
           <NavbarItemL
             targetable={!display ? -1 : 0}

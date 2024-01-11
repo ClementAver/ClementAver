@@ -58,12 +58,12 @@ const projects = [
   },
   {
     id: "lanuitdudroit",
-    name: "La Nuit Du Droit",
+    name: "La Nuit du Droit",
     logo: { src: "Logo-LNDD.svg", alt: "Logo de La Nuit Du Droit." },
     title: "La Nuit du Droit",
     tags: ["Animation", "Réseaux sociaux"],
     date: "2021",
-    work: "Déploiement de l’identité afin de promouvoir l’évènement sur les réseaux sociaux",
+    work: "Déploiement de l’identité afin de promouvoir l’évènement sur les réseaux sociaux.",
     summary:
       "La Nuit du Droit, par les manifestations les plus diverses, a pour objectif de mieux faire connaître le droit, ses principes, ses institutions, ses métiers.",
     cover: {

@@ -38,6 +38,7 @@ export type MenuItem = {
   path: string;
   icon?: ReactElement;
   targetable?: number;
+  target?: boolean;
 };
 
 export interface Project {
