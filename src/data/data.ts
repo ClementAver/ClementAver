@@ -1,13 +1,13 @@
 const projects = [
   {
     id: "galerierobillard",
-    name: "Galerie robillard",
+    name: "Galerie Robillard",
     logo: {
       src: "logo-galerie-robillard.svg",
       alt: "Logo de la Galerie Robillard.",
     },
     title: "Galerie Robillard",
-    tags: ["Identité visuelle", "maquettage web"],
+    tags: ["Identité visuelle", "Maquettage web"],
     date: "2021",
     work: "Recherche d’identité, conception de pictogrammes et maquettage web.",
     summary:

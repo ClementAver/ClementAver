@@ -50,7 +50,10 @@ export default function Home() {
             </p>
             <p>
               ça se passe sur{" "}
-              <Link href="https://github.com/ClementAver">
+              <Link
+                href="https://github.com/ClementAver"
+                target="_blank"
+              >
                 <Softwares softwares={["gh"]} />
               </Link>
               .

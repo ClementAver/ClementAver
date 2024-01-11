@@ -44,12 +44,12 @@ export default function About() {
 
             <p>
               &laquo;&#8239;Après avoir travaillé six ans en tant que designer
-              graphique spécialisé dans le numérique, j’ai transitionné vers le
-              développement front-end en suivant une formation longue achevée en
-              décembre 2023. Avec ce bachelor en poche, je suis impatient de
-              rejoindre une équipe de développement web qui partage ma passion
-              pour les défis techniques, l’efficience et la maîtrise
-              visuelle.&#8239;&raquo;
+              graphique spécialisé dans le numérique, je me suis reconverti dans
+              le développement front-end en suivant une formation longue,
+              achevée en décembre 2023. Avec ce bachelor en poche, je suis
+              impatient de rejoindre une équipe de développement web qui partage
+              mon engouement pour les défis techniques, l’efficience et la
+              maîtrise visuelle.&#8239;&raquo;
             </p>
             <br />
 
@@ -86,7 +86,7 @@ export default function About() {
 
               <p>
                 <span className="bold">
-                  BTS design graphique, communication &&nbsp;médias numériques
+                  BTS Design Graphique, communication &&nbsp;médias numériques
                 </span>
                 <br />
                 au Campus Fonderie de l’Image (Bagnolet, 93)
@@ -99,7 +99,7 @@ export default function About() {
                 <br />à L’ESAAB (Nevers, 58)
               </p>
 
-              <h3>2011— 2014</h3>
+              <h3>2011 — 2014</h3>
 
               <p>
                 <span className="bold">
@@ -117,7 +117,7 @@ export default function About() {
 
               <p>
                 <span className="bold">
-                  Graphiste auto-entrepreneur (Paris, 75)
+                  Graphiste auto-entrepreneur (Paris 13e)
                 </span>
                 <br />
                 Maquettage web/print, iconographie, photographie, motion design,
@@ -171,7 +171,7 @@ export default function About() {
 
               <p>
                 Ma formation portait sur React. Je l’ai enrichie avec
-                TypeScript, Next, et Vitest entre autres.
+                TypeScript, Next et Vitest, entre autres.
               </p>
               <p>
                 À titre personnel, je me suis également penché sur PHP et MySQL
@@ -184,7 +184,7 @@ export default function About() {
                 <span className="bold">Suite Adobe</span>
                 <br />
                 Maîtrise de Indesign, Illustrator, Photoshop, Lightroom ; niveau
-                intermédiaire sur les logiciels After Effects et Première Pro.
+                intermédiaire sur les logiciels After Effects et Première Pro
               </p>
 
               <p>
