@@ -24,15 +24,20 @@
 
   .intro {
     margin: auto;
-
     display: flex;
     flex-flow: column nowrap;
 
     align-items: center;
+    width: 100%;
     max-width: 600px;
 
     h1 {
       text-align: center;
+
+      @media screen and (max-width: 675px) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
     }
 
     p {

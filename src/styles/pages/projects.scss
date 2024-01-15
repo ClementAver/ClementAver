@@ -48,6 +48,13 @@
 
     text-align: center;
     justify-content: center;
+
+    h2 {
+      @media screen and (max-width: 675px) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+    }
   }
   /* main-containers -e */
 

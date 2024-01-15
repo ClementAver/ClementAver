@@ -36,7 +36,11 @@ export default function Home() {
       >
         <section className="container-slide">
           <div className="intro">
-            <h1>Bonjour, et&nbsp;bienvenue.</h1>
+            <h1>
+              Bonjour,
+              <br />
+              et bienvenue.
+            </h1>
             <p>
               Ce site est une fenêtre vers différentes réalisations de design
               graphique et motion de mon fait. Il témoigne de ma pratique et

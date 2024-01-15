@@ -550,10 +550,17 @@ main::-webkit-scrollbar {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  width: 100%;
   max-width: 600px;
 }
 .home .intro h1 {
   text-align: center;
+}
+@media screen and (max-width: 675px) {
+  .home .intro h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 .home .intro p {
   text-align: center;
@@ -699,6 +706,12 @@ main::-webkit-scrollbar {
   height: fit-content;
   text-align: center;
 }
+@media screen and (max-width: 675px) {
+  .about .container-flex-intro h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
 .about .container-flex-intro p {
   margin-bottom: 1rem;
 }
@@ -815,6 +828,12 @@ main::-webkit-scrollbar {
   padding: 22px;
   text-align: center;
   justify-content: center;
+}
+@media screen and (max-width: 675px) {
+  .projects .container-full-height h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
 }
 .projects .container-flex-intro h1 {
   width: fit-content;
