@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { projects } from "../data/data";
 import type { Project } from "../types";
+import Head from "next/head";
 import ProjectIntro from "@/components/project/ProjectIntro";
 import ProjectOutro from "@/components/project/ProjectOutro";
 import MediaTile from "@/components/Tiles/MediaTile";
@@ -35,6 +36,14 @@ export default function Perial() {
   }, []);
 
   return (
+    <>
+      <Head>
+        <title>CA - Perial</title>
+        <meta
+          name="description"
+          content="Page projet – Perial"
+        />
+      </Head>
     <main
       className="projects"
       tabIndex={-1}
@@ -112,5 +121,6 @@ export default function Perial() {
 
       <ProjectOutro quote="SEE YOU SPACE COWBOY…" />
     </main>
+</>
   );
 }

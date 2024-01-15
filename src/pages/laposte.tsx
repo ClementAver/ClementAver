@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { projects } from "../data/data";
 import type { Project } from "../types";
+import Head from "next/head";
 import ProjectIntro from "@/components/project/ProjectIntro";
 import ProjectOutro from "@/components/project/ProjectOutro";
 import MediaTile from "@/components/Tiles/MediaTile";
@@ -36,6 +37,14 @@ export default function LaPoste() {
   }, []);
 
   return (
+    <>
+      <Head>
+        <title>CA - La Poste</title>
+        <meta
+          name="description"
+          content="Page projet – La Poste"
+        />
+      </Head>
     <main className="projects">
       <h1 className="sr-only">{project?.title}</h1>
       <NavRight
@@ -119,5 +128,6 @@ export default function LaPoste() {
 
       <ProjectOutro quote="Fin de transmission" />
     </main>
+</>
   );
 }

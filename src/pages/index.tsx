@@ -25,6 +25,10 @@ export default function Home() {
     <>
       <Head>
         <title>Clément Aver – accueil</title>
+        <meta
+          name="description"
+          content="page d'accueil"
+        />
       </Head>
       <main
         className="home"

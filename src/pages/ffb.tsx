@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { projects } from "../data/data";
 import type { Project } from "../types";
+import Head from "next/head";
 import ProjectIntro from "@/components/project/ProjectIntro";
 import ProjectOutro from "@/components/project/ProjectOutro";
 import MediaTile from "@/components/Tiles/MediaTile";
@@ -36,6 +37,14 @@ export default function FFB() {
   }, []);
 
   return (
+<>
+      <Head>
+        <title>CA - FFB</title>
+        <meta
+          name="description"
+          content="Page projet – Fédération Française de Béhourd"
+        />
+      </Head>
     <main
       className="projects"
       tabIndex={-1}
@@ -149,5 +158,6 @@ export default function FFB() {
 
       <ProjectOutro quote="Fuyez, pauvres fous !" />
     </main>
+</>
   );
 }
