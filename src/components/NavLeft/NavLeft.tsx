@@ -65,7 +65,7 @@ export default function NavLeft({ displayed }: { displayed: boolean }) {
       </div>
       <nav
         ref={navLeft}
-        className="nav-left deployed"
+        className={display ? "nav-left deployed" : "nav-left"}
       >
         <div style={{ marginTop: "auto", paddingTop: "0.5rem" }}></div>
         <LogoCard targetable={!display ? -1 : 0} />

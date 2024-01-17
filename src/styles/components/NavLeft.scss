@@ -12,7 +12,12 @@
 
   position: fixed;
   top: 22px;
-  right: 22px;
+  left: 22px;
+
+  // @media screen and (max-width: 768px) {
+  //   left: auto;
+  //   right: 22px;
+  // }
 
   z-index: 110;
 
@@ -62,12 +67,18 @@
   overflow-y: scroll;
   overflow-x: hidden;
 
+  transition: transform 0.3s ease-in-out;
+  transform: translate(-240px);
+
   @media (max-width: 1024px) {
     padding: 0 0 2rem 0;
   }
 
-  transition: transform 0.3s ease-in-out;
-  transform: translate(-240px);
+  // @media screen and (max-width: 768px) {
+  //   left: auto;
+  //   right: 0px;
+  //   transform: translate(240px);
+  // }
 
   &.deployed {
     transform: translate(0px);

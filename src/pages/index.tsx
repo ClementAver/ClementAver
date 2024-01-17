@@ -76,6 +76,7 @@ export default function Home() {
             project={project}
           />
         ))}
+        <div style={{ width: "100%", height: "4rem" }}></div>
       </main>
     </>
   );

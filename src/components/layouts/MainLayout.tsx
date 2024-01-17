@@ -10,7 +10,7 @@ export default function MainLayout({
   return (
     <>
       <ScrollToAnchor />
-      <NavLeft displayed={true} />
+      <NavLeft displayed={false} />
       {children}
     </>
   );
