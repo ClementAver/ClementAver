@@ -533,7 +533,6 @@ main::-webkit-scrollbar {
 .home .container-slide {
   scroll-snap-align: start;
   width: 100%;
-  min-width: 344px;
   min-height: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -556,10 +555,10 @@ main::-webkit-scrollbar {
 .home .intro h1 {
   text-align: center;
 }
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 428px) {
   .home .intro h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 .home .intro p {
@@ -649,7 +648,6 @@ main::-webkit-scrollbar {
 .about .container-slide-intro {
   scroll-snap-align: start;
   width: 100%;
-  min-width: 344px;
   min-height: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -672,7 +670,6 @@ main::-webkit-scrollbar {
 .about .container-slide-CV {
   scroll-snap-align: start;
   width: 100%;
-  min-width: 344px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -680,6 +677,11 @@ main::-webkit-scrollbar {
   min-height: 100vh;
   padding: 22px;
   overflow-x: hidden;
+}
+@media (max-width: 1280px) {
+  .about .container-slide-CV {
+    padding-bottom: 6rem;
+  }
 }
 @media (max-width: 1280px) {
   .about .container-slide-CV {
@@ -706,10 +708,10 @@ main::-webkit-scrollbar {
   height: fit-content;
   text-align: center;
 }
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 428px) {
   .about .container-flex-intro h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 .about .container-flex-intro p {
@@ -799,12 +801,10 @@ main::-webkit-scrollbar {
 .projects .container-slide {
   scroll-snap-align: start;
   min-height: 100vh;
-  min-width: 344px;
+  height: fit-content;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 @media screen and (max-height: 950px) {
   .projects .container-slide {
@@ -820,19 +820,24 @@ main::-webkit-scrollbar {
 }
 .projects .container-full-height {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   width: 100%;
   min-width: 300px;
   max-width: 874px;
   height: 100%;
+  min-height: 100vh;
+  max-height: fit-content;
   padding: 22px;
   text-align: center;
-  justify-content: center;
 }
-@media screen and (max-width: 675px) {
+.projects .container-full-height article {
+  margin: auto auto;
+  height: fit-content;
+}
+@media screen and (max-width: 428px) {
   .projects .container-full-height h2 {
-    font-size: 3rem;
-    line-height: 3.5rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 .projects .container-flex-intro h1 {
@@ -848,6 +853,7 @@ main::-webkit-scrollbar {
   min-height: 150px;
   max-height: 300px;
   margin-bottom: 2vh;
+  margin-top: 2rem;
 }
 
 /* media -s */
@@ -1043,6 +1049,11 @@ main::-webkit-scrollbar {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
 
+.outro-content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 /* outro -e */
 @media (min-width: 768px) {
   .nav-left.deployed + main {
@@ -1097,6 +1108,11 @@ main::-webkit-scrollbar {
   overflow-x: hidden;
   transition: transform 0.3s ease-in-out;
   transform: translate(-240px);
+}
+@media (max-width: 1024px) {
+  .nav-left {
+    padding: 0 0 2rem 0;
+  }
 }
 .nav-left.deployed {
   transform: translate(0px);

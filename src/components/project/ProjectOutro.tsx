@@ -37,12 +37,14 @@ export default function ProjectOutro({ quote }: { quote: string }) {
       }
     >
       <div className="container-full-height">
-        <h2>{quote}</h2>
+        <div className="outro-content">
+          <h2>{quote}</h2>
 
-        <div className="boutons-multiples">
-          <Link href="/">Retour à l’accueil</Link>
+          <div className="boutons-multiples">
+            <Link href="/">Retour à l’accueil</Link>
 
-          <Link href={"#intro"}>Haut de page</Link>
+            <Link href={"#intro"}>Haut de page</Link>
+          </div>
         </div>
       </div>
     </section>

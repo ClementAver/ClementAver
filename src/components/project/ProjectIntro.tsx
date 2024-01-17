@@ -43,37 +43,39 @@ export default function ProjectIntro({ project }: { project: Project }) {
       }
     >
       <h2 className="sr-only">{title}</h2>
-      <article className="container-full-height">
-        <img
-          className="logo-projet"
-          src={logoUrl}
-          alt={logoAlt}
-        />
+      <div className="container-full-height">
+        <article >
+          <img
+            className="logo-projet"
+            src={logoUrl}
+            alt={logoAlt}
+          />
 
-        <h2 className="main-title">{title}</h2>
-        <span className="rubriquage">
-          {tags.map((tag, index) => {
-            const key = `tag-${index}`;
-            if (index !== 0) {
-              return <span key={key}>, {tag}</span>;
-            }
-            return <span key={key}>{tag}</span>;
-          })}
-          <span>{`, ${date}`}</span>
-        </span>
+          <h2 className="main-title">{title}</h2>
+          <span className="rubriquage">
+            {tags.map((tag, index) => {
+              const key = `tag-${index}`;
+              if (index !== 0) {
+                return <span key={key}>, {tag}</span>;
+              }
+              return <span key={key}>{tag}</span>;
+            })}
+            <span>{`, ${date}`}</span>
+          </span>
 
-        <p>{work}</p>
-        {summary && (
-          <>
-            <p>•</p>
-            <p>{summary}</p>
-          </>
-        )}
+          <p>{work}</p>
+          {summary && (
+            <>
+              <p>•</p>
+              <p>{summary}</p>
+            </>
+          )}
 
-        <br />
+          <br />
 
-        <p className="scale">↓</p>
-      </article>
+          <p className="scale">↓</p>
+        </article>
+      </div>
     </section>
   );
 }
