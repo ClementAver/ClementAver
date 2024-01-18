@@ -1052,6 +1052,10 @@ main::-webkit-scrollbar {
 .outro-content {
   margin-top: auto;
   margin-bottom: auto;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 /* outro -e */
