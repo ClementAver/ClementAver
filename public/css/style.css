@@ -804,6 +804,7 @@ main::-webkit-scrollbar {
   height: fit-content;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 }
 @media screen and (max-height: 950px) {
