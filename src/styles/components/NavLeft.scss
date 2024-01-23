@@ -1,7 +1,9 @@
 // the main markup will be resized when the menu is deployed.
-.nav-left.deployed + main {
-  @media (min-width: 768px) {
-    margin-left: 240px;
+.nav-left.deployed {
+  & + main {
+    @media (min-width: 768px) {
+      margin-left: 240px;
+    }
   }
 }
 
@@ -25,17 +27,19 @@
   border-radius: 20px;
   width: 30px;
   height: 30px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   background-color: $colorTwo;
   display: flex;
 
   align-items: center;
 
-  &:hover {
-    background-color: $colorFour;
+  @media (hover: hover) {
+    &:hover {
+      background-color: $colorFour;
 
-    .sgmt-btn-nav-left {
-      border-top: 0.15rem solid $colorTwo;
+      .sgmt-btn-nav-left {
+        border-top: 0.15rem solid $colorTwo;
+      }
     }
   }
 
@@ -108,8 +112,10 @@
 
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
-    &:hover {
-      background-color: $colorFour;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $colorFour;
+      }
     }
 
     &:active {
@@ -130,20 +136,24 @@
         font-weight 0.3s ease-in-out, fill 0.3s ease-in-out;
     }
 
-    &:hover a {
-      transform: translateX(6px);
-      font-weight: 500;
+    @media (hover: hover) {
+      &:hover a {
+        transform: translateX(6px);
+        font-weight: 500;
+      }
     }
 
     a.page-active {
       color: $colorFour;
       fill: $colorFour;
       font-weight: 600;
-    }
 
-    a.page-active:hover {
-      fill: $colorOne;
-      color: $colorOne;
+      @media (hover: hover) {
+        &:hover {
+          fill: $colorOne;
+          color: $colorOne;
+        }
+      }
     }
   }
 }
@@ -164,9 +174,11 @@
   border-radius: 0.5rem;
   fill: $colorOne;
 
-  &:hover {
-    background-color: $colorFour;
-    fill: $colorFour;
+  @media (hover: hover) {
+    &:hover {
+      background-color: $colorFour;
+      fill: $colorFour;
+    }
   }
 }
 

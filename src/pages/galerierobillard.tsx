@@ -147,7 +147,7 @@ export default function GalerieRobillard() {
             softwares={["fi", "ae"]}
           />
         )}
-        <ProjectOutro quote="That's all folks" />
+        <ProjectOutro quote="That’s all folks" />
       </main>
     </>
   );

@@ -962,6 +962,12 @@ main::-webkit-scrollbar {
   stroke-miterlimit: 2;
   stroke-width: 5px;
 }
+@media (hover: hover) {
+  .btn-nav-slider:hover {
+    background-color: #314766;
+    transform: scale(1.5);
+  }
+}
 
 .previous {
   margin: auto auto auto 22px;
@@ -969,11 +975,6 @@ main::-webkit-scrollbar {
 
 .next {
   margin: auto 22px auto auto;
-}
-
-.btn-nav-slider:hover {
-  background-color: #314766;
-  transform: scale(1.5);
 }
 
 .icon-nav-slider-previous {
@@ -1025,8 +1026,10 @@ main::-webkit-scrollbar {
   padding: 0.7rem;
   border-bottom: 1px solid #314766;
 }
-.boutons-multiples a:hover {
-  background-color: #c7ced8;
+@media (hover: hover) {
+  .boutons-multiples a:hover {
+    background-color: #c7ced8;
+  }
 }
 .boutons-multiples a:active {
   background-color: #b2bccc;
@@ -1077,16 +1080,18 @@ main::-webkit-scrollbar {
   border-radius: 20px;
   width: 30px;
   height: 30px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   background-color: #f0f0f0;
   display: flex;
   align-items: center;
 }
-#nav-left-btn:hover {
-  background-color: #677b99;
-}
-#nav-left-btn:hover .sgmt-btn-nav-left {
-  border-top: 0.15rem solid #f0f0f0;
+@media (hover: hover) {
+  #nav-left-btn:hover {
+    background-color: #677b99;
+  }
+  #nav-left-btn:hover .sgmt-btn-nav-left {
+    border-top: 0.15rem solid #f0f0f0;
+  }
 }
 #nav-left-btn .sgmt-btn-nav-left {
   border-top: 0.15rem solid #314766;
@@ -1141,8 +1146,10 @@ main::-webkit-scrollbar {
   margin-right: 11px;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-.nav-left li:hover {
-  background-color: #677b99;
+@media (hover: hover) {
+  .nav-left li:hover {
+    background-color: #677b99;
+  }
 }
 .nav-left li:active {
   background-color: #8b9aae;
@@ -1158,18 +1165,22 @@ main::-webkit-scrollbar {
   padding-left: 11px;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, font-weight 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
-.nav-left li:hover a {
-  transform: translateX(6px);
-  font-weight: 500;
+@media (hover: hover) {
+  .nav-left li:hover a {
+    transform: translateX(6px);
+    font-weight: 500;
+  }
 }
 .nav-left li a.page-active {
   color: #677b99;
   fill: #677b99;
   font-weight: 600;
 }
-.nav-left li a.page-active:hover {
-  fill: #314766;
-  color: #314766;
+@media (hover: hover) {
+  .nav-left li a.page-active:hover {
+    fill: #314766;
+    color: #314766;
+  }
 }
 
 #container-logo {
@@ -1184,9 +1195,11 @@ main::-webkit-scrollbar {
   border-radius: 0.5rem;
   fill: #314766;
 }
-#container-logo:hover {
-  background-color: #677b99;
-  fill: #677b99;
+@media (hover: hover) {
+  #container-logo:hover {
+    background-color: #677b99;
+    fill: #677b99;
+  }
 }
 
 #picto-logo {

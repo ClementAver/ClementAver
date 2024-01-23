@@ -206,6 +206,13 @@
   stroke: $colorTwo;
   stroke-miterlimit: 2;
   stroke-width: 5px;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $colorOne;
+      transform: scale(1.5);
+    }
+  }
 }
 
 .previous {
@@ -214,11 +221,6 @@
 
 .next {
   margin: auto 22px auto auto;
-}
-
-.btn-nav-slider:hover {
-  background-color: $colorOne;
-  transform: scale(1.5);
 }
 
 .icon-nav-slider-previous {
@@ -278,8 +280,10 @@
     padding: 0.7rem;
     border-bottom: 1px solid $colorOne;
 
-    &:hover {
-      background-color: $colorThree;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $colorThree;
+      }
     }
 
     &:active {

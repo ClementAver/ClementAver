@@ -29,6 +29,11 @@ export default function NavLeft({ displayed }: { displayed: boolean }) {
         aria-label="Ouvrir/Fermer le menu."
         id="nav-left-btn"
         role="button"
+        style={
+          display
+            ? { transform: "translateX(240px)" }
+            : { transform: "translateX(0px)" }
+        }
       >
         <div
           className="sgmt-btn-nav-left"
