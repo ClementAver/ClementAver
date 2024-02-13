@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import type { Project } from "../../types";
-import Image from "next/image";
 
 export default function ProjectIntro({ project }: { project: Project }) {
   const [isIntersecting, setIsIntersecting] = useState<boolean>(false);

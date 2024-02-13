@@ -8,15 +8,8 @@ import MediaTile from "@/components/Tiles/MediaTile";
 import Slider from "@/components/Slider/Slider";
 import NavRight from "@/components/NavRight/NavRight";
 
-export default function LabelISR() {
-  const [project, setProject] = useState<Project>();
-
-  const id = "labelisr";
-
+export default function LabelISR({ project }: { project: Project }) {
   useEffect(() => {
-    const project = projects.filter((project) => project.id === id)[0];
-    setProject(project);
-
     // Chrome scroll-snap-align fixes :
     const interval = setInterval(snapFixe);
 
@@ -193,4 +186,21 @@ export default function LabelISR() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const data = await import(`@/data/data`);
+  const projects = data.projects;
+  const project = projects.filter((project) => project.id === "labelisr")[0];
+
+  // Will redirect on destination
+  if (projects.length === 0) {
+    return {
+      redirect: { destination: "/" },
+    };
+  }
+
+  return {
+    props: { project },
+  };
 }

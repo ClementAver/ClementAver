@@ -8,15 +8,8 @@ import MediaTile from "@/components/Tiles/MediaTile";
 import Slider from "@/components/Slider/Slider";
 import NavRight from "@/components/NavRight/NavRight";
 
-export default function FFB() {
-  const [project, setProject] = useState<Project>();
-
-  const id = "ffb";
-
+export default function FFB({ project } : {project : Project}) {
   useEffect(() => {
-    const project = projects.filter((project) => project.id === id)[0];
-    setProject(project);
-
     // Chrome scroll-snap-align fixes :
     const interval = setInterval(snapFixe);
 
@@ -37,7 +30,7 @@ export default function FFB() {
   }, []);
 
   return (
-<>
+    <>
       <Head>
         <title>CA - FFB</title>
         <meta
@@ -45,119 +38,136 @@ export default function FFB() {
           content="Page projet – Fédération Française de Béhourd"
         />
       </Head>
-    <main
-      className="projects"
-      tabIndex={-1}
-    >
-      <h1 className="sr-only">{project?.title}</h1>
-      <NavRight
-        sections={[
-          {
-            id: "intro",
-            name: "Présentation",
-          },
-          {
-            id: "photo-d-ensemble",
-            name: "Photo d'ensemble",
-          },
-          {
-            id: "affiche",
-            name: "Affiche",
-          },
-          {
-            id: "details-de-l-affiche",
-            name: "Détails de l'affiche",
-          },
-          {
-            id: "depliant",
-            name: "Dépliant",
-          },
-          {
-            id: "outro",
-            name: "Bas de page",
-          },
-        ]}
-      />
-
-      {project && <ProjectIntro project={project} />}
-
-      {project && (
-        <MediaTile
-          id="photo-d-ensemble"
-          media={{
-            className: "media",
-            src: `${project.medias[0].src}`,
-            alt: `${project.medias[0].alt}`,
-          }}
-          noDescription
-        />
-      )}
-      {project && (
-        <MediaTile
-          id="affiche"
-          media={{
-            className: "media",
-            src: `${project.medias[1].src}`,
-            alt: `${project.medias[1].alt}`,
-          }}
-          description={
-            "Affiche produite à l’occasion du tournoi de Béhourd de la Citadelle."
-          }
-          softwares={["in", "ai", "ps"]}
-        />
-      )}
-      {project && (
-        <Slider
-          id="details-de-l-affiche"
-          medias={[
+      <main
+        className="projects"
+        tabIndex={-1}
+      >
+        <h1 className="sr-only">{project?.title}</h1>
+        <NavRight
+          sections={[
             {
-              className: "media-slider",
-              src: `${project.medias[2].src}`,
-              alt: `${project.medias[2].alt}`,
+              id: "intro",
+              name: "Présentation",
             },
             {
-              className: "media-slider",
-              src: `${project.medias[3].src}`,
-              alt: `${project.medias[3].alt}`,
+              id: "photo-d-ensemble",
+              name: "Photo d'ensemble",
+            },
+            {
+              id: "affiche",
+              name: "Affiche",
+            },
+            {
+              id: "details-de-l-affiche",
+              name: "Détails de l'affiche",
+            },
+            {
+              id: "depliant",
+              name: "Dépliant",
+            },
+            {
+              id: "outro",
+              name: "Bas de page",
             },
           ]}
-          noDescription
         />
-      )}
-      {project && (
-        <Slider
-          id="depliant"
-          medias={[
-            {
-              className: "media-slider",
-              src: `${project.medias[4].src}`,
-              alt: `${project.medias[4].alt}`,
-            },
-            {
-              className: "media-slider",
-              src: `${project.medias[5].src}`,
-              alt: `${project.medias[5].alt}`,
-            },
-            {
-              className: "media-slider",
-              src: `${project.medias[6].src}`,
-              alt: `${project.medias[6].alt}`,
-            },
-            {
-              className: "media-slider",
-              src: `${project.medias[7].src}`,
-              alt: `${project.medias[7].alt}`,
-            },
-          ]}
-          description={
-            "Dépliant introduisant la discipline ainsi que la fédération auprès du public. Distribué durant les tournois."
-          }
-          softwares={["in", "ai", "ps"]}
-        />
-      )}
 
-      <ProjectOutro quote="Fuyez, pauvres fous !" />
-    </main>
-</>
+        {project && <ProjectIntro project={project} />}
+
+        {project && (
+          <MediaTile
+            id="photo-d-ensemble"
+            media={{
+              className: "media",
+              src: `${project.medias[0].src}`,
+              alt: `${project.medias[0].alt}`,
+            }}
+            noDescription
+          />
+        )}
+        {project && (
+          <MediaTile
+            id="affiche"
+            media={{
+              className: "media",
+              src: `${project.medias[1].src}`,
+              alt: `${project.medias[1].alt}`,
+            }}
+            description={
+              "Affiche produite à l’occasion du tournoi de Béhourd de la Citadelle."
+            }
+            softwares={["in", "ai", "ps"]}
+          />
+        )}
+        {project && (
+          <Slider
+            id="details-de-l-affiche"
+            medias={[
+              {
+                className: "media-slider",
+                src: `${project.medias[2].src}`,
+                alt: `${project.medias[2].alt}`,
+              },
+              {
+                className: "media-slider",
+                src: `${project.medias[3].src}`,
+                alt: `${project.medias[3].alt}`,
+              },
+            ]}
+            noDescription
+          />
+        )}
+        {project && (
+          <Slider
+            id="depliant"
+            medias={[
+              {
+                className: "media-slider",
+                src: `${project.medias[4].src}`,
+                alt: `${project.medias[4].alt}`,
+              },
+              {
+                className: "media-slider",
+                src: `${project.medias[5].src}`,
+                alt: `${project.medias[5].alt}`,
+              },
+              {
+                className: "media-slider",
+                src: `${project.medias[6].src}`,
+                alt: `${project.medias[6].alt}`,
+              },
+              {
+                className: "media-slider",
+                src: `${project.medias[7].src}`,
+                alt: `${project.medias[7].alt}`,
+              },
+            ]}
+            description={
+              "Dépliant introduisant la discipline ainsi que la fédération auprès du public. Distribué durant les tournois."
+            }
+            softwares={["in", "ai", "ps"]}
+          />
+        )}
+
+        <ProjectOutro quote="Fuyez, pauvres fous !" />
+      </main>
+    </>
   );
+}
+
+export async function getStaticProps() {
+  const data = await import(`@/data/data`);
+  const projects = data.projects;
+  const project = projects.filter((project) => project.id === "ffb")[0];
+
+  // Will redirect on destination
+  if (projects.length === 0) {
+    return {
+      redirect: { destination: "/" },
+    };
+  }
+
+  return {
+    props: { project },
+  };
 }
